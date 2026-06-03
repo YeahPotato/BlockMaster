@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>方块大师 - UI 原型</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      background: #1a1d23;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .app {
+      display: flex;
+      gap: 24px;
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav {
+      flex: 0 0 200px;
+      position: sticky;
+      top: 24px;
+      height: fit-content;
+    }
+    .nav h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    .nav .sub {
+      font-size: 12px;
+      color: #8693a6;
+      margin-bottom: 20px;
+    }
+    .nav button {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      background: #2c313a;
+      color: #d8dee9;
+      border: 1px solid #3c424d;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+    }
+    .nav button:hover {
+      background: #3c424d;
+      color: #fff;
+    }
+    .nav button.active {
+      background: #FFB400;
+      color: #2c313a;
+      border-color: #FFB400;
+      font-weight: bold;
+    }
+    .stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .scene-info {
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #8693a6;
+    }
+    .phone-frame {
+      width: 375px;
+      height: 667px;
+      background: #000;
+      border-radius: 36px;
+      padding: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 22px;
+      background: #000;
+      border-radius: 0 0 16px 16px;
+      z-index: 10;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      display: block;
+      cursor: pointer;
+    }
+    .legend {
+      margin-top: 16px;
+      padding: 16px;
+      background: #2c313a;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .legend h3 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #FFB400;
+    }
+    .legend code {
+      background: #1a1d23;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #6BCB77;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="nav">
+      <h1>🧩 方块大师</h1>
+      <div class="sub">UI 静态原型 · 仅视觉</div>
+      <button data-scene="main" class="active">① 主菜单</button>
+      <button data-scene="select">② 选关</button>
+      <button data-scene="game">③ 游戏中</button>
+      <button data-scene="game-dragging">③.5 拖拽中</button>
+      <button data-scene="result">④ 通关结算</button>
+      <button data-scene="skin">⑤ 皮肤商店</button>
+      <button data-scene="daily">⑥ 每日签到</button>
+      <button data-scene="settings">⑦ 设置</button>
+    </div>
+    <div class="stage">
+      <div class="scene-info" id="sceneInfo">主菜单 MainScene</div>
+      <div class="phone-frame">
+        <canvas id="cv" width="750" height="1334"></canvas>
+      </div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+
+  <div id="errBox" style="display:none;position:fixed;top:10px;right:10px;background:#FF6B6B;color:#fff;padding:12px 16px;border-radius:8px;font-size:13px;max-width:500px;font-family:monospace;white-space:pre-wrap;z-index:999"></div>
+  <script>
+    window.onerror = function (msg, src, line, col, err) {
+      var box = document.getElementById('errBox');
+      box.style.display = 'block';
+      box.textContent = '[JS 错误] ' + msg + '\n' + (err && err.stack || '') + '\n@' + src + ':' + line + ':' + col;
+    };
+  </script>
+  <script src="./pattern.js"></script>
+  <script src="./prototype.js"></script>
+  <script>
+    // 兜底：如果 prototype.js 因任何原因没把第一帧画出来，在这里给个提示
+    setTimeout(function () {
+      var cv = document.getElementById('cv');
+      var ctx = cv.getContext('2d');
+      var img = ctx.getImageData(10, 10, 1, 1).data;
+      if (img[0] === 0 && img[1] === 0 && img[2] === 0 && img[3] === 0) {
+        var box = document.getElementById('errBox');
+        if (box.style.display !== 'block') {
+          box.style.display = 'block';
+          box.textContent = '[警告] Canvas 未被绘制 - 可能 prototype.js 执行被中断或函数未触发，请打开 F12 控制台查看。';
+        }
+      }
+    }, 500);
+  </script>
+</body>
+</html>
