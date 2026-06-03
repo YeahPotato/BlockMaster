@@ -1,0 +1,106 @@
+{
+  "totalLevels": 500,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "萌新草原",
+      "icon": "🌱",
+      "difficulty": 1,
+      "file": "chapter_1.json",
+      "levelCount": 50,
+      "levelStart": 1,
+      "levelEnd": 50
+    },
+    {
+      "id": 2,
+      "name": "蔚蓝海岸",
+      "icon": "🌊",
+      "difficulty": 2,
+      "file": "chapter_2.json",
+      "levelCount": 50,
+      "levelStart": 51,
+      "levelEnd": 100
+    },
+    {
+      "id": 3,
+      "name": "樱花小镇",
+      "icon": "🌸",
+      "difficulty": 3,
+      "file": "chapter_3.json",
+      "levelCount": 50,
+      "levelStart": 101,
+      "levelEnd": 150
+    },
+    {
+      "id": 4,
+      "name": "秋日森林",
+      "icon": "🍂",
+      "difficulty": 4,
+      "file": "chapter_4.json",
+      "levelCount": 50,
+      "levelStart": 151,
+      "levelEnd": 200
+    },
+    {
+      "id": 5,
+      "name": "冰雪奇境",
+      "icon": "❄️",
+      "difficulty": 5,
+      "file": "chapter_5.json",
+      "levelCount": 50,
+      "levelStart": 201,
+      "levelEnd": 250
+    },
+    {
+      "id": 6,
+      "name": "火山熔岩",
+      "icon": "🌋",
+      "difficulty": 6,
+      "file": "chapter_6.json",
+      "levelCount": 50,
+      "levelStart": 251,
+      "levelEnd": 300
+    },
+    {
+      "id": 7,
+      "name": "沙漠遗迹",
+      "icon": "🏜️",
+      "difficulty": 7,
+      "file": "chapter_7.json",
+      "levelCount": 50,
+      "levelStart": 301,
+      "levelEnd": 350
+    },
+    {
+      "id": 8,
+      "name": "星空幻境",
+      "icon": "🌌",
+      "difficulty": 8,
+      "file": "chapter_8.json",
+      "levelCount": 50,
+      "levelStart": 351,
+      "levelEnd": 400
+    },
+    {
+      "id": 9,
+      "name": "龙脊山脉",
+      "icon": "🐉",
+      "difficulty": 9,
+      "file": "chapter_9.json",
+      "levelCount": 50,
+      "levelStart": 401,
+      "levelEnd": 450
+    },
+    {
+      "id": 10,
+      "name": "王者之巅",
+      "icon": "👑",
+      "difficulty": 10,
+      "file": "chapter_10.json",
+      "levelCount": 50,
+      "levelStart": 451,
+      "levelEnd": 500
+    }
+  ],
+  "generatedAt": "2026-06-03T06:57:11.685Z"
+}

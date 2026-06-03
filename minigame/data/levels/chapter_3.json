@@ -1,0 +1,7069 @@
+{
+  "chapter": 3,
+  "name": "樱花小镇",
+  "icon": "🌸",
+  "difficulty": 3,
+  "levels": [
+    {
+      "levelId": 101,
+      "chapter": 3,
+      "levelInChapter": 1,
+      "name": "樱花小镇-1",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 102,
+      "chapter": 3,
+      "levelInChapter": 2,
+      "name": "樱花小镇-2",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 103,
+      "chapter": 3,
+      "levelInChapter": 3,
+      "name": "樱花小镇-3",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 104,
+      "chapter": 3,
+      "levelInChapter": 4,
+      "name": "樱花小镇-4",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 105,
+      "chapter": 3,
+      "levelInChapter": 5,
+      "name": "樱花小镇-5",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 106,
+      "chapter": 3,
+      "levelInChapter": 6,
+      "name": "樱花小镇-6",
+      "difficulty": 3,
+      "difficultyScore": 12,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 107,
+      "chapter": 3,
+      "levelInChapter": 7,
+      "name": "樱花小镇-7",
+      "difficulty": 3,
+      "difficultyScore": 12,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 108,
+      "chapter": 3,
+      "levelInChapter": 8,
+      "name": "樱花小镇-8",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 109,
+      "chapter": 3,
+      "levelInChapter": 9,
+      "name": "樱花小镇-9",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 110,
+      "chapter": 3,
+      "levelInChapter": 10,
+      "name": "樱花小镇-10",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 111,
+      "chapter": 3,
+      "levelInChapter": 11,
+      "name": "樱花小镇-11",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 112,
+      "chapter": 3,
+      "levelInChapter": 12,
+      "name": "樱花小镇-12",
+      "difficulty": 3,
+      "difficultyScore": 12,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 113,
+      "chapter": 3,
+      "levelInChapter": 13,
+      "name": "樱花小镇-13",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 114,
+      "chapter": 3,
+      "levelInChapter": 14,
+      "name": "樱花小镇-14",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 115,
+      "chapter": 3,
+      "levelInChapter": 15,
+      "name": "樱花小镇-15",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 116,
+      "chapter": 3,
+      "levelInChapter": 16,
+      "name": "樱花小镇-16",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 117,
+      "chapter": 3,
+      "levelInChapter": 17,
+      "name": "樱花小镇-17",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 118,
+      "chapter": 3,
+      "levelInChapter": 18,
+      "name": "樱花小镇-18",
+      "difficulty": 3,
+      "difficultyScore": 11,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 119,
+      "chapter": 3,
+      "levelInChapter": 19,
+      "name": "樱花小镇-19",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 120,
+      "chapter": 3,
+      "levelInChapter": 20,
+      "name": "樱花小镇-20",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 121,
+      "chapter": 3,
+      "levelInChapter": 21,
+      "name": "樱花小镇-21",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 122,
+      "chapter": 3,
+      "levelInChapter": 22,
+      "name": "樱花小镇-22",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 123,
+      "chapter": 3,
+      "levelInChapter": 23,
+      "name": "樱花小镇-23",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 124,
+      "chapter": 3,
+      "levelInChapter": 24,
+      "name": "樱花小镇-24",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 125,
+      "chapter": 3,
+      "levelInChapter": 25,
+      "name": "樱花小镇-25",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 126,
+      "chapter": 3,
+      "levelInChapter": 26,
+      "name": "樱花小镇-26",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 127,
+      "chapter": 3,
+      "levelInChapter": 27,
+      "name": "樱花小镇-27",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 128,
+      "chapter": 3,
+      "levelInChapter": 28,
+      "name": "樱花小镇-28",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 129,
+      "chapter": 3,
+      "levelInChapter": 29,
+      "name": "樱花小镇-29",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 130,
+      "chapter": 3,
+      "levelInChapter": 30,
+      "name": "樱花小镇-30",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 131,
+      "chapter": 3,
+      "levelInChapter": 31,
+      "name": "樱花小镇-31",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 132,
+      "chapter": 3,
+      "levelInChapter": 32,
+      "name": "樱花小镇-32",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 133,
+      "chapter": 3,
+      "levelInChapter": 33,
+      "name": "樱花小镇-33",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 134,
+      "chapter": 3,
+      "levelInChapter": 34,
+      "name": "樱花小镇-34",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 135,
+      "chapter": 3,
+      "levelInChapter": 35,
+      "name": "樱花小镇-35",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 136,
+      "chapter": 3,
+      "levelInChapter": 36,
+      "name": "樱花小镇-36",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 137,
+      "chapter": 3,
+      "levelInChapter": 37,
+      "name": "樱花小镇-37",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 138,
+      "chapter": 3,
+      "levelInChapter": 38,
+      "name": "樱花小镇-38",
+      "difficulty": 3,
+      "difficultyScore": 12,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 139,
+      "chapter": 3,
+      "levelInChapter": 39,
+      "name": "樱花小镇-39",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 140,
+      "chapter": 3,
+      "levelInChapter": 40,
+      "name": "樱花小镇-40",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 141,
+      "chapter": 3,
+      "levelInChapter": 41,
+      "name": "樱花小镇-41",
+      "difficulty": 3,
+      "difficultyScore": 11,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 142,
+      "chapter": 3,
+      "levelInChapter": 42,
+      "name": "樱花小镇-42",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 143,
+      "chapter": 3,
+      "levelInChapter": 43,
+      "name": "樱花小镇-43",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 144,
+      "chapter": 3,
+      "levelInChapter": 44,
+      "name": "樱花小镇-44",
+      "difficulty": 3,
+      "difficultyScore": 10,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 145,
+      "chapter": 3,
+      "levelInChapter": 45,
+      "name": "樱花小镇-45",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_0",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 146,
+      "chapter": 3,
+      "levelInChapter": 46,
+      "name": "樱花小镇-46",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 147,
+      "chapter": 3,
+      "levelInChapter": 47,
+      "name": "樱花小镇-47",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "I3_2",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 148,
+      "chapter": 3,
+      "levelInChapter": 48,
+      "name": "樱花小镇-48",
+      "difficulty": 3,
+      "difficultyScore": 11,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "I3_3",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 149,
+      "chapter": 3,
+      "levelInChapter": 49,
+      "name": "樱花小镇-49",
+      "difficulty": 3,
+      "difficultyScore": 14,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 150,
+      "chapter": 3,
+      "levelInChapter": 50,
+      "name": "樱花小镇-50",
+      "difficulty": 3,
+      "difficultyScore": 15,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "I3_1",
+          "shapeName": "I3",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 80,
+        "star1": {
+          "coins": 80
+        },
+        "star2": {
+          "coins": 160,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 290,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    }
+  ]
+}

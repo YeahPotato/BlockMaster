@@ -1,0 +1,9470 @@
+{
+  "chapter": 4,
+  "name": "秋日森林",
+  "icon": "🍂",
+  "difficulty": 4,
+  "levels": [
+    {
+      "levelId": 151,
+      "chapter": 4,
+      "levelInChapter": 1,
+      "name": "秋日森林-1",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 152,
+      "chapter": 4,
+      "levelInChapter": 2,
+      "name": "秋日森林-2",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 153,
+      "chapter": 4,
+      "levelInChapter": 3,
+      "name": "秋日森林-3",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 154,
+      "chapter": 4,
+      "levelInChapter": 4,
+      "name": "秋日森林-4",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 155,
+      "chapter": 4,
+      "levelInChapter": 5,
+      "name": "秋日森林-5",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 156,
+      "chapter": 4,
+      "levelInChapter": 6,
+      "name": "秋日森林-6",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 157,
+      "chapter": 4,
+      "levelInChapter": 7,
+      "name": "秋日森林-7",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 158,
+      "chapter": 4,
+      "levelInChapter": 8,
+      "name": "秋日森林-8",
+      "difficulty": 4,
+      "difficultyScore": 20,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 159,
+      "chapter": 4,
+      "levelInChapter": 9,
+      "name": "秋日森林-9",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 160,
+      "chapter": 4,
+      "levelInChapter": 10,
+      "name": "秋日森林-10",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 161,
+      "chapter": 4,
+      "levelInChapter": 11,
+      "name": "秋日森林-11",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 162,
+      "chapter": 4,
+      "levelInChapter": 12,
+      "name": "秋日森林-12",
+      "difficulty": 4,
+      "difficultyScore": 20,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 163,
+      "chapter": 4,
+      "levelInChapter": 13,
+      "name": "秋日森林-13",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 164,
+      "chapter": 4,
+      "levelInChapter": 14,
+      "name": "秋日森林-14",
+      "difficulty": 4,
+      "difficultyScore": 20,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 165,
+      "chapter": 4,
+      "levelInChapter": 15,
+      "name": "秋日森林-15",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 166,
+      "chapter": 4,
+      "levelInChapter": 16,
+      "name": "秋日森林-16",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 167,
+      "chapter": 4,
+      "levelInChapter": 17,
+      "name": "秋日森林-17",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 168,
+      "chapter": 4,
+      "levelInChapter": 18,
+      "name": "秋日森林-18",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 169,
+      "chapter": 4,
+      "levelInChapter": 19,
+      "name": "秋日森林-19",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 170,
+      "chapter": 4,
+      "levelInChapter": 20,
+      "name": "秋日森林-20",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 171,
+      "chapter": 4,
+      "levelInChapter": 21,
+      "name": "秋日森林-21",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 172,
+      "chapter": 4,
+      "levelInChapter": 22,
+      "name": "秋日森林-22",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 173,
+      "chapter": 4,
+      "levelInChapter": 23,
+      "name": "秋日森林-23",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 174,
+      "chapter": 4,
+      "levelInChapter": 24,
+      "name": "秋日森林-24",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 175,
+      "chapter": 4,
+      "levelInChapter": 25,
+      "name": "秋日森林-25",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 176,
+      "chapter": 4,
+      "levelInChapter": 26,
+      "name": "秋日森林-26",
+      "difficulty": 4,
+      "difficultyScore": 21,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 177,
+      "chapter": 4,
+      "levelInChapter": 27,
+      "name": "秋日森林-27",
+      "difficulty": 4,
+      "difficultyScore": 21,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 178,
+      "chapter": 4,
+      "levelInChapter": 28,
+      "name": "秋日森林-28",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 179,
+      "chapter": 4,
+      "levelInChapter": 29,
+      "name": "秋日森林-29",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 180,
+      "chapter": 4,
+      "levelInChapter": 30,
+      "name": "秋日森林-30",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 181,
+      "chapter": 4,
+      "levelInChapter": 31,
+      "name": "秋日森林-31",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 182,
+      "chapter": 4,
+      "levelInChapter": 32,
+      "name": "秋日森林-32",
+      "difficulty": 4,
+      "difficultyScore": 20,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 183,
+      "chapter": 4,
+      "levelInChapter": 33,
+      "name": "秋日森林-33",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 184,
+      "chapter": 4,
+      "levelInChapter": 34,
+      "name": "秋日森林-34",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 185,
+      "chapter": 4,
+      "levelInChapter": 35,
+      "name": "秋日森林-35",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 186,
+      "chapter": 4,
+      "levelInChapter": 36,
+      "name": "秋日森林-36",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 187,
+      "chapter": 4,
+      "levelInChapter": 37,
+      "name": "秋日森林-37",
+      "difficulty": 4,
+      "difficultyScore": 21,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 188,
+      "chapter": 4,
+      "levelInChapter": 38,
+      "name": "秋日森林-38",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 189,
+      "chapter": 4,
+      "levelInChapter": 39,
+      "name": "秋日森林-39",
+      "difficulty": 4,
+      "difficultyScore": 21,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 190,
+      "chapter": 4,
+      "levelInChapter": 40,
+      "name": "秋日森林-40",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 191,
+      "chapter": 4,
+      "levelInChapter": 41,
+      "name": "秋日森林-41",
+      "difficulty": 4,
+      "difficultyScore": 20,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 192,
+      "chapter": 4,
+      "levelInChapter": 42,
+      "name": "秋日森林-42",
+      "difficulty": 4,
+      "difficultyScore": 19,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 193,
+      "chapter": 4,
+      "levelInChapter": 43,
+      "name": "秋日森林-43",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L_2",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 194,
+      "chapter": 4,
+      "levelInChapter": 44,
+      "name": "秋日森林-44",
+      "difficulty": 4,
+      "difficultyScore": 21,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L3_3",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 195,
+      "chapter": 4,
+      "levelInChapter": 45,
+      "name": "秋日森林-45",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_1",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_3",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 196,
+      "chapter": 4,
+      "levelInChapter": 46,
+      "name": "秋日森林-46",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L3_2",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "T_0",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 197,
+      "chapter": 4,
+      "levelInChapter": 47,
+      "name": "秋日森林-47",
+      "difficulty": 4,
+      "difficultyScore": 17,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "O_4",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 198,
+      "chapter": 4,
+      "levelInChapter": 48,
+      "name": "秋日森林-48",
+      "difficulty": 4,
+      "difficultyScore": 16,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_0",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L3_1",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "L3_4",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 199,
+      "chapter": 4,
+      "levelInChapter": 49,
+      "name": "秋日森林-49",
+      "difficulty": 4,
+      "difficultyScore": 18,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "L_0",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_1",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "T_2",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "O_3",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#51CF66"
+        },
+        {
+          "id": "L_4",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#339AF0"
+        }
+      ],
+      "solutionCount": 4,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    },
+    {
+      "levelId": 200,
+      "chapter": 4,
+      "levelInChapter": 50,
+      "name": "秋日森林-50",
+      "difficulty": 4,
+      "difficultyScore": 22,
+      "gridSize": {
+        "width": 6,
+        "height": 6
+      },
+      "targetCells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "availableBlocks": [
+        {
+          "id": "T_4",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#339AF0"
+        },
+        {
+          "id": "L_1",
+          "shapeName": "L",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFA94D"
+        },
+        {
+          "id": "O_2",
+          "shapeName": "O",
+          "shape": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FFD43B"
+        },
+        {
+          "id": "L3_0",
+          "shapeName": "L3",
+          "shape": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "color": "#FF6B6B"
+        },
+        {
+          "id": "T_3",
+          "shapeName": "T",
+          "shape": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "color": "#51CF66"
+        }
+      ],
+      "solutionCount": 2,
+      "rewards": {
+        "coins": 90,
+        "star1": {
+          "coins": 90
+        },
+        "star2": {
+          "coins": 180,
+          "diamonds": 5
+        },
+        "star3": {
+          "coins": 320,
+          "diamonds": 10,
+          "stickerPiece": 1
+        }
+      }
+    }
+  ]
+}

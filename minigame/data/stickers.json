@@ -1,0 +1,55 @@
+{
+  "$schema": "贴纸配置说明",
+  "_note": "贴纸用于覆盖在方块上，给方块一个图案/IP 形象。后续可接美术资源。",
+  "version": "1.0.0",
+  "stickerPacks": [
+    {
+      "id": "fruits",
+      "name": "水果家族",
+      "category": "免费",
+      "stickers": ["apple", "orange", "lemon", "watermelon", "grape", "peach", "strawberry"],
+      "unlockType": "default"
+    },
+    {
+      "id": "pets",
+      "name": "萌宠贴纸",
+      "category": "钻石",
+      "stickers": ["cat", "dog", "rabbit", "panda", "tiger", "fox", "bear"],
+      "unlockType": "diamonds",
+      "unlockValue": 200
+    },
+    {
+      "id": "pixelHero",
+      "name": "像素勇者",
+      "category": "成就",
+      "stickers": ["warrior", "mage", "archer", "rogue", "priest", "dragon", "knight"],
+      "unlockType": "stars",
+      "unlockValue": 500
+    },
+    {
+      "id": "anime_style_a",
+      "name": "二次元少女（自创）",
+      "category": "限定",
+      "stickers": [],
+      "unlockType": "event",
+      "unlockValue": "limited_2026_summer",
+      "_note": "原创角色，避免侵权"
+    },
+    {
+      "id": "mecha",
+      "name": "机甲战士（自创）",
+      "category": "限定",
+      "stickers": [],
+      "unlockType": "stickerPieces",
+      "unlockValue": 50
+    },
+    {
+      "id": "festival_spring",
+      "name": "春节限定",
+      "category": "节日",
+      "stickers": ["dragon", "lantern", "couplet", "firework", "fish", "ingot", "fortune"],
+      "unlockType": "event",
+      "unlockValue": "spring_festival"
+    }
+  ]
+}
