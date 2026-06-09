@@ -834,6 +834,7 @@ class GameScene {
       this._undo();
     } else if (label === '🔄 重置') {
       this.init();
+    }
   }
 
   // 撤销操作
