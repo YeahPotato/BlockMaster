@@ -427,12 +427,24 @@ class GameScene {
     const blockW = bounds.width * cellSize;
     const blockH = bounds.height * cellSize;
     
+    // 计算方块的实际位置
+    let blockX, blockY;
+    if (block.placed && !inTray) {
+      // 已放置的方块：根据 gridX 和 gridY 计算位置
+      blockX = this.targetX + 20 + block.gridX * cellSize;
+      blockY = this.targetY + 20 + block.gridY * cellSize;
+    } else {
+      // 托盘中的方块：使用 block.x 和 block.y
+      blockX = block.x;
+      blockY = block.y;
+    }
+    
     // 绘制每个单元格
     for (let r = bounds.minY; r < bounds.minY + bounds.height; r++) {
       for (let c = bounds.minX; c < bounds.minX + bounds.width; c++) {
         if (block.shape[r][c] === 1) {
-          const x = block.x + (c - bounds.minX) * cellSize;
-          const y = block.y + (r - bounds.minY) * cellSize;
+          const x = blockX + (c - bounds.minX) * cellSize;
+          const y = blockY + (r - bounds.minY) * cellSize;
           
           // 渐变填充
           const gradient = ctx.createLinearGradient(x, y, x, y + cellSize);
@@ -459,7 +471,7 @@ class GameScene {
     // 外边框阴影效果
     ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
     ctx.lineWidth = 2;
-    this._roundRect(ctx, block.x - 3, block.y - 3, blockW + 6, blockH + 6, 14);
+    this._roundRect(ctx, blockX - 3, blockY - 3, blockW + 6, blockH + 6, 14);
     ctx.stroke();
     
     // 如果在托盘中，添加虚线边框表示可拖拽
@@ -467,7 +479,7 @@ class GameScene {
       ctx.strokeStyle = 'rgba(91, 157, 249, 0.6)';
       ctx.lineWidth = 2;
       ctx.setLineDash([6, 4]);
-      this._roundRect(ctx, block.x - 3, block.y - 3, blockW + 6, blockH + 6, 14);
+      this._roundRect(ctx, blockX - 3, blockY - 3, blockW + 6, blockH + 6, 14);
       ctx.stroke();
       ctx.setLineDash([]);
     }
@@ -475,7 +487,7 @@ class GameScene {
     // 如果已放置，添加阴影
     if (block.placed && !inTray) {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-      this._roundRect(ctx, block.x + 4, block.y + 6, blockW, blockH, 12);
+      this._roundRect(ctx, blockX + 4, blockY + 6, blockW, blockH, 12);
       ctx.fill();
     }
   }
