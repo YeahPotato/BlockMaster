@@ -37,6 +37,10 @@ class PuzzleGenerator {
     // 步形
     STEP: [[1, 1, 1], [1, 0, 0]],
     STEP2: [[1, 1], [1, 0], [1, 0]],
+    // 4x1
+    I4: [[1, 1, 1, 1]],
+    // 1x4
+    I4V: [[1], [1], [1], [1]],
   };
 
   // 方块颜色
@@ -49,6 +53,9 @@ class PuzzleGenerator {
     '#9775FA', // 紫
     '#F783AC', // 粉
   ];
+
+  // 固定的游戏区域大小
+  static BOARD_SIZE = 10;
 
   /**
    * 根据关卡生成题目
@@ -64,17 +71,27 @@ class PuzzleGenerator {
     const availableShapes = this._getShapesByDifficulty(difficulty);
 
     // 随机选择方块
-    const blocks = this._selectBlocks(availableShapes, blockCount);
+    let blocks = this._selectBlocks(availableShapes, blockCount);
 
-    // 计算目标区域（方块拼接后的形状）
-    const targetShape = this._mergeBlocks(blocks);
+    // 计算放置区域（在 10x10 区域内的规整形状）
+    const result = this._generatePlacementArea(blocks, difficulty);
+
+    if (!result) {
+      // 如果生成失败，使用预设
+      return this._generateFallback(level, blockCount);
+    }
+
+    // 打乱方块的顺序和旋转方向
+    this._shuffleBlocks(blocks);
 
     return {
       level,
       blockCount,
       difficulty,
-      blocks, // 不打乱，保持原始顺序
-      targetShape, // 目标形状（用于验证）
+      blocks, // 打乱后的方块
+      placementArea: result.placementArea, // 放置区域轮廓
+      placements: result.placements, // 正确答案
+      totalCells: result.totalCells,
     };
   }
 
@@ -85,103 +102,129 @@ class PuzzleGenerator {
     switch (difficulty) {
       case 1:
         // 简单：只用基础形状
-        return ['I1', 'I2', 'I2V', 'I22', 'L', 'L2', 'L3', 'L4'];
+        return ['I2', 'I2V', 'I22', 'L', 'L2', 'L3', 'L4', 'I3'];
       case 2:
         // 中等：加入 T、Z 形
-        return ['I1', 'I2', 'I2V', 'I22', 'L', 'L2', 'L3', 'L4', 'T', 'T2', 'Z', 'Z2'];
+        return ['I2', 'I2V', 'I22', 'L', 'L2', 'L3', 'L4', 'T', 'T2', 'Z', 'Z2', 'I3', 'I4'];
       case 3:
       default:
         // 困难：所有形状
-        return Object.keys(this.SHAPES);
+        return Object.keys(this.SHAPES).filter(k => k !== 'I1');
     }
   }
 
   /**
    * 选择方块
-   * 保证方块能拼成方正的区域
    */
   static _selectBlocks(availableShapes, count) {
     const blocks = [];
-    const maxAttempts = 100;
+    const usedShapes = new Set();
 
-    for (let attempt = 0; attempt < maxAttempts; attempt++) {
-      blocks.length = 0;
-
-      // 随机选择方块
-      for (let i = 0; i < count; i++) {
-        const shapeKey = availableShapes[Math.floor(Math.random() * availableShapes.length)];
-        const shape = this.SHAPES[shapeKey];
-        const color = this.COLORS[i % this.COLORS.length];
-        
-        blocks.push({
-          id: i,
-          shapeKey,
-          shape: this._deepCopy(shape),
-          color,
-          rotation: 0, // 当前旋转角度（0, 90, 180, 270）
-        });
+    for (let i = 0; i < count; i++) {
+      // 随机选择一个未使用的形状
+      let shapeKey;
+      let attempts = 0;
+      do {
+        shapeKey = availableShapes[Math.floor(Math.random() * availableShapes.length)];
+        attempts++;
+      } while (usedShapes.has(shapeKey) && attempts < 5);
+      
+      if (usedShapes.has(shapeKey)) {
+        shapeKey = availableShapes[Math.floor(Math.random() * availableShapes.length)];
       }
-
-      // 验证是否能拼成方正区域
-      const merged = this._mergeBlocks(blocks);
-      if (merged) {
-        return blocks; // 不打乱，保持原始顺序
-      }
+      
+      usedShapes.add(shapeKey);
+      
+      const shape = this._deepCopy(this.SHAPES[shapeKey]);
+      const color = this.COLORS[i % this.COLORS.length];
+      
+      blocks.push({
+        id: i,
+        shapeKey,
+        shape,
+        color,
+        rotation: 0,
+        originalShape: this._deepCopy(shape), // 保存原始形状
+      });
     }
 
-    // 如果多次尝试失败，使用预设组合
-    return this._fallbackBlocks(count);
+    return blocks;
   }
 
   /**
-   * 合并方块成目标形状
-   * 使用回溯算法找到一种拼接方案
+   * 生成放置区域
+   * 在 10x10 的区域内生成一个规整的放置区域
    */
-  static _mergeBlocks(blocks) {
+  static _generatePlacementArea(blocks, difficulty) {
+    const boardSize = this.BOARD_SIZE;
     const totalCells = blocks.reduce((sum, b) => 
       sum + b.shape.reduce((s, row) => s + row.reduce((r, cell) => r + cell, 0), 0), 0
     , 0);
 
-    // 计算目标区域大小（尽量方正）
-    const side = Math.ceil(Math.sqrt(totalCells));
-    const width = Math.min(side, 6); // 限制最大宽度
-    const height = Math.ceil(totalCells / width);
+    // 根据难度决定放置区域的大小
+    let areaWidth, areaHeight;
+    if (difficulty === 1) {
+      // 简单：2x3 或 3x2
+      areaWidth = Math.min(3, Math.ceil(Math.sqrt(totalCells)));
+      areaHeight = Math.ceil(totalCells / areaWidth);
+    } else if (difficulty === 2) {
+      // 中等：3x3 或 3x4
+      areaWidth = Math.min(4, Math.ceil(Math.sqrt(totalCells)));
+      areaHeight = Math.ceil(totalCells / areaWidth);
+    } else {
+      // 困难：4x4 或更大
+      areaWidth = Math.min(5, Math.ceil(Math.sqrt(totalCells)));
+      areaHeight = Math.ceil(totalCells / areaWidth);
+    }
 
-    // 创建目标区域
-    const target = Array(height).fill(null).map(() => Array(width).fill(0));
+    // 确保不超过方块总数
+    if (areaWidth * areaHeight > totalCells) {
+      areaHeight = Math.ceil(totalCells / areaWidth);
+    }
+
+    // 在 10x10 区域内随机选择放置位置
+    const maxX = Math.max(1, boardSize - areaWidth);
+    const maxY = Math.max(1, boardSize - areaHeight);
+    const startX = Math.floor(Math.random() * maxX);
+    const startY = Math.floor(Math.random() * maxY);
+
+    // 创建放置区域轮廓
+    const placementArea = Array(boardSize).fill(null).map(() => Array(boardSize).fill(0));
+    for (let r = 0; r < areaHeight; r++) {
+      for (let c = 0; c < areaWidth; c++) {
+        placementArea[startY + r][startX + c] = 1;
+      }
+    }
+
+    // 计算放置方案
+    const placements = [];
+    const usedArea = Array(boardSize).fill(null).map(() => Array(boardSize).fill(0));
+    
+    for (const cell of placementArea.flat()) {
+      if (cell === 1) break;
+    }
 
     // 尝试放置方块
-    const placements = []; // 记录每个方块的放置位置
-
-    const canPlace = (blockIdx, x, y, shape) => {
+    const canPlace = (block, x, y, shape) => {
       for (let r = 0; r < shape.length; r++) {
         for (let c = 0; c < shape[r].length; c++) {
           if (shape[r][c] === 1) {
             const tx = x + c;
             const ty = y + r;
-            if (tx < 0 || tx >= width || ty < 0 || ty >= height) return false;
-            if (target[ty][tx] !== 0) return false;
+            if (tx < 0 || tx >= boardSize || ty < 0 || ty >= boardSize) return false;
+            if (usedArea[ty][tx] !== 0) return false;
+            if (placementArea[ty][tx] !== 1) return false; // 必须在放置区域内
           }
         }
       }
       return true;
     };
 
-    const placeBlock = (blockIdx, x, y, shape) => {
+    const placeBlock = (block, x, y, shape) => {
       for (let r = 0; r < shape.length; r++) {
         for (let c = 0; c < shape[r].length; c++) {
           if (shape[r][c] === 1) {
-            target[y + r][x + c] = blocks[blockIdx].id + 1;
-          }
-        }
-      }
-    };
-
-    const removeBlock = (blockIdx, x, y, shape) => {
-      for (let r = 0; r < shape.length; r++) {
-        for (let c = 0; c < shape[r].length; c++) {
-          if (shape[r][c] === 1) {
-            target[y + r][x + c] = 0;
+            usedArea[y + r][x + c] = block.id + 1;
           }
         }
       }
@@ -195,15 +238,22 @@ class PuzzleGenerator {
       // 尝试所有位置和旋转
       for (let rot = 0; rot < 4; rot++) {
         const rotated = this._rotateShape(block.shape, rot);
-        for (let y = 0; y <= height - rotated.length; y++) {
-          for (let x = 0; x <= width - rotated[0].length; x++) {
-            if (canPlace(blockIdx, x, y, rotated)) {
-              placeBlock(blockIdx, x, y, rotated);
+        for (let y = startY; y < startY + areaHeight; y++) {
+          for (let x = startX; x < startX + areaWidth; x++) {
+            if (canPlace(block, x, y, rotated)) {
+              placeBlock(block, x, y, rotated);
               placements.push({ x, y, rotation: rot });
               if (solve(blockIdx + 1)) {
                 return true;
               }
-              removeBlock(blockIdx, x, y, rotated);
+              // 回溯
+              for (let r = 0; r < rotated.length; r++) {
+                for (let c = 0; c < rotated[r].length; c++) {
+                  if (rotated[r][c] === 1) {
+                    usedArea[y + r][x + c] = 0;
+                  }
+                }
+              }
               placements.pop();
             }
           }
@@ -214,13 +264,99 @@ class PuzzleGenerator {
 
     if (solve()) {
       return {
-        width,
-        height,
-        target,
+        placementArea,
         placements,
+        totalCells: totalCells,
+        areaWidth,
+        areaHeight,
+        startX,
+        startY,
       };
     }
     return null;
+  }
+
+  /**
+   * 打乱方块的顺序和旋转方向
+   */
+  static _shuffleBlocks(blocks) {
+    // 打乱顺序
+    for (let i = blocks.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [blocks[i], blocks[j]] = [blocks[j], blocks[i]];
+    }
+
+    // 随机旋转
+    for (const block of blocks) {
+      const randomRot = Math.floor(Math.random() * 4);
+      block.shape = this._rotateShape(block.originalShape, randomRot);
+      block.rotation = randomRot;
+    }
+  }
+
+  /**
+   * 预设题目（备用）
+   */
+  static _generateFallback(level, blockCount) {
+    const presets = [
+      // 3 个方块
+      {
+        blocks: [
+          { id: 0, shapeKey: 'I22', shape: this._deepCopy(this.SHAPES.I22), color: this.COLORS[0], rotation: 0 },
+          { id: 1, shapeKey: 'L', shape: this._deepCopy(this.SHAPES.L), color: this.COLORS[1], rotation: 0 },
+          { id: 2, shapeKey: 'I2', shape: this._deepCopy(this.SHAPES.I2), color: this.COLORS[2], rotation: 0 },
+        ],
+        placementArea: [
+          [1,1,1,1,0,0,0,0,0,0],
+          [1,1,1,1,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+        ],
+        placements: [{ x: 0, y: 0, rotation: 0 }, { x: 2, y: 0, rotation: 0 }, { x: 0, y: 1, rotation: 0 }],
+        totalCells: 12,
+      },
+      // 4 个方块
+      {
+        blocks: [
+          { id: 0, shapeKey: 'I22', shape: this._deepCopy(this.SHAPES.I22), color: this.COLORS[0], rotation: 0 },
+          { id: 1, shapeKey: 'I2', shape: this._deepCopy(this.SHAPES.I2), color: this.COLORS[1], rotation: 0 },
+          { id: 2, shapeKey: 'L', shape: this._deepCopy(this.SHAPES.L), color: this.COLORS[2], rotation: 0 },
+          { id: 3, shapeKey: 'I2V', shape: this._deepCopy(this.SHAPES.I2V), color: this.COLORS[3], rotation: 0 },
+        ],
+        placementArea: [
+          [1,1,1,1,0,0,0,0,0,0],
+          [1,1,1,1,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0],
+        ],
+        placements: [{ x: 0, y: 0, rotation: 0 }, { x: 2, y: 0, rotation: 0 }, { x: 0, y: 1, rotation: 0 }, { x: 3, y: 1, rotation: 0 }],
+        totalCells: 14,
+      },
+    ];
+
+    const preset = presets[blockCount - 3];
+    this._shuffleBlocks(preset.blocks);
+    return {
+      level,
+      blockCount,
+      difficulty: level < 4 ? 1 : 2,
+      blocks: preset.blocks,
+      placementArea: preset.placementArea,
+      placements: preset.placements,
+      totalCells: preset.totalCells,
+    };
   }
 
   /**
@@ -254,40 +390,6 @@ class PuzzleGenerator {
    */
   static _deepCopy(arr) {
     return arr.map(row => [...row]);
-  }
-
-  /**
-   * 打乱数组
-   */
-  static _shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  }
-
-  /**
-   * 预设方块组合（备用）
-   */
-  static _fallbackBlocks(count) {
-    const presets = [
-      // 3 个方块
-      [
-        { id: 0, shape: this._deepCopy(this.SHAPES.I22), color: this.COLORS[0] },
-        { id: 1, shape: this._deepCopy(this.SHAPES.L), color: this.COLORS[1] },
-        { id: 2, shape: this._deepCopy(this.SHAPES.I2), color: this.COLORS[2] },
-      ],
-      // 4 个方块
-      [
-        { id: 0, shape: this._deepCopy(this.SHAPES.I22), color: this.COLORS[0] },
-        { id: 1, shape: this._deepCopy(this.SHAPES.I2), color: this.COLORS[1] },
-        { id: 2, shape: this._deepCopy(this.SHAPES.L), color: this.COLORS[2] },
-        { id: 3, shape: this._deepCopy(this.SHAPES.I2V), color: this.COLORS[3] },
-      ],
-    ];
-
-    return this._shuffle([...presets[count - 3]]);
   }
 
   /**
