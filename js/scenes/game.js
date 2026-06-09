@@ -114,14 +114,6 @@ class GameScene {
         fontSize: 22 * fontScale,
       })
     );
-    
-    // 跳关按钮
-    this.toolButtons.push(
-      new Button(this.ctx, startX + (btnW + 15) * 3, startY, btnW, btnH, '📺 跳关', {
-        bg: '#FF8B6B',
-        fontSize: 22 * fontScale,
-      })
-    );
   }
 
   _createTopButtons() {
@@ -842,17 +834,6 @@ class GameScene {
       this._undo();
     } else if (label === '🔄 重置') {
       this.init();
-    } else if (label === '📺 跳关') {
-      // 消耗钻石跳关
-      if (this.databus.spendDiamonds(5)) {
-        const next = this.databus.getNextLevel(this.params.chapter, this.params.level);
-        if (this._sceneManager) {
-          this._sceneManager.go('game', next);
-        }
-      } else {
-        wx.showToast({ title: '💎 不足，看广告可获得', icon: 'none' });
-      }
-    }
   }
 
   // 撤销操作

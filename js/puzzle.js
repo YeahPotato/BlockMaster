@@ -69,14 +69,11 @@ class PuzzleGenerator {
     // 计算目标区域（方块拼接后的形状）
     const targetShape = this._mergeBlocks(blocks);
 
-    // 打乱方块顺序
-    const shuffledBlocks = this._shuffle([...blocks]);
-
     return {
       level,
       blockCount,
       difficulty,
-      blocks: shuffledBlocks, // 打乱后的方块
+      blocks, // 不打乱，保持原始顺序
       targetShape, // 目标形状（用于验证）
     };
   }
@@ -128,7 +125,7 @@ class PuzzleGenerator {
       // 验证是否能拼成方正区域
       const merged = this._mergeBlocks(blocks);
       if (merged) {
-        return blocks;
+        return blocks; // 不打乱，保持原始顺序
       }
     }
 
