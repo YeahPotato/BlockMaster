@@ -1,6 +1,6 @@
 /**
  * 方块大师 - 游戏场景
- * 方块拼图游戏
+ * 方块拼图游戏 - 优化版
  */
 const { Sprite, Rect, Text, Button } = require('../base/sprite.js');
 const PuzzleGenerator = require('../puzzle.js');
@@ -32,27 +32,30 @@ class GameScene {
     this.targetShape = puzzle.targetShape;
     this.targetWidth = puzzle.targetShape.width;
     this.targetHeight = puzzle.targetShape.height;
-    this.placements = puzzle.placements; // 正确答案
+    this.placements = puzzle.placements;
 
-    // 计算游戏区域
-    const cellSize = Math.min(
-      (this.W - 100) / this.targetWidth,
-      (this.H - 400) / this.targetHeight
+    // 计算游戏区域 - 优化布局
+    const maxCellSize = Math.min(
+      (this.W - 120) / this.targetWidth,
+      (this.H - 450) / this.targetHeight
     );
-    this.cellSize = Math.floor(cellSize);
+    this.cellSize = Math.max(60, Math.floor(maxCellSize));
     
     // 目标区域位置（居中）
     const targetW = this.targetWidth * this.cellSize;
     const targetH = this.targetHeight * this.cellSize;
     this.targetX = (this.W - targetW) / 2;
-    this.targetY = 150;
+    this.targetY = 180;
     
     // 已放置的方块
     this.placedBlocks = [];
     
-    // 拖拽状态
+    // 拖拽状态 - 改进版
     this.dragging = null;
+    this.isDragging = false;
+    this.dragStartPos = { x: 0, y: 0 };
     this.dragOffset = { x: 0, y: 0 };
+    this.dragGhost = null; // 拖拽时的幽灵方块
     
     // 撤销栈
     this.undoStack = [];
@@ -71,7 +74,7 @@ class GameScene {
     
     // 双击检测
     this.lastTap = { x: 0, y: 0, time: 0 };
-    this.tapThreshold = 300; // 双击间隔阈值
+    this.tapThreshold = 300;
     
     // 胜利状态
     this.winState = null;
@@ -86,32 +89,33 @@ class GameScene {
 
   _createToolButtons() {
     const W = this.W;
-    const btnW = 160, btnH = 80;
+    const btnW = 140, btnH = 70;
     const startX = 30;
-    const startY = this.H - 120;
+    const startY = this.H - 110;
+    const gap = 20;
     const fontScale = this.scaleY;
     
     // 提示按钮
     this.toolButtons.push(
       new Button(this.ctx, startX, startY, btnW, btnH, `💡×${this.hintTickets}`, {
         bg: '#FFB400',
-        fontSize: 22 * fontScale,
+        fontSize: 20 * fontScale,
       })
     );
     
     // 撤销按钮
     this.toolButtons.push(
-      new Button(this.ctx, startX + btnW + 15, startY, btnW, btnH, '↩ 撤销', {
+      new Button(this.ctx, startX + btnW + gap, startY, btnW, btnH, '↩ 撤销', {
         bg: '#5B9DF9',
-        fontSize: 22 * fontScale,
+        fontSize: 20 * fontScale,
       })
     );
     
     // 重置按钮
     this.toolButtons.push(
-      new Button(this.ctx, startX + (btnW + 15) * 2, startY, btnW, btnH, '🔄 重置', {
+      new Button(this.ctx, startX + (btnW + gap) * 2, startY, btnW, btnH, '🔄 重置', {
         bg: '#6BCB77',
-        fontSize: 22 * fontScale,
+        fontSize: 20 * fontScale,
       })
     );
   }
@@ -119,16 +123,16 @@ class GameScene {
   _createTopButtons() {
     // 返回按钮
     this.topButtons.push(
-      new Button(this.ctx, 30, 40, 110, 70, '◀ 返回', {
+      new Button(this.ctx, 30, 30, 100, 60, '◀ 返回', {
         bg: '#FFFFFF',
-        fontSize: 24 * this.scaleY,
+        fontSize: 22 * this.scaleY,
       })
     );
     // 重置按钮
     this.topButtons.push(
-      new Button(this.ctx, this.W - 110 - 30, 40, 110, 70, '🔄 重置', {
+      new Button(this.ctx, this.W - 100 - 30, 30, 100, 60, '🔄 重置', {
         bg: '#FFFFFF',
-        fontSize: 24 * this.scaleY,
+        fontSize: 22 * this.scaleY,
       })
     );
   }
@@ -141,14 +145,20 @@ class GameScene {
     const ctx = this.ctx;
     const W = this.W, H = this.H;
 
-    // 背景
-    ctx.fillStyle = '#F8F9FA';
+    // 背景 - 渐变
+    const gradient = ctx.createLinearGradient(0, 0, 0, H);
+    gradient.addColorStop(0, '#E8F4FD');
+    gradient.addColorStop(1, '#F0F8FF');
+    ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, W, H);
+
+    // 装饰圆点
+    this._renderDecorations();
 
     // 顶栏
     this._renderTopBar();
 
-    // 目标区域（空白）
+    // 目标区域
     this._renderTargetArea();
 
     // 已放置的方块
@@ -156,8 +166,8 @@ class GameScene {
       this._renderBlock(block);
     }
 
-    // 拖拽预览
-    if (this.dragging) {
+    // 拖拽预览（跟随手指）
+    if (this.isDragging && this.dragging) {
       this._renderDragPreview();
     }
 
@@ -172,6 +182,26 @@ class GameScene {
     // 胜利提示
     if (this.winState) {
       this._renderWinOverlay();
+    }
+  }
+
+  _renderDecorations() {
+    const ctx = this.ctx;
+    const W = this.W, H = this.H;
+    
+    // 小圆点装饰
+    const dots = [
+      { x: 80, y: 100, r: 8, color: 'rgba(255, 180, 100, 0.3)' },
+      { x: W - 80, y: 120, r: 12, color: 'rgba(100, 200, 255, 0.3)' },
+      { x: 100, y: H - 150, r: 6, color: 'rgba(150, 150, 255, 0.2)' },
+      { x: W - 120, y: H - 130, r: 10, color: 'rgba(255, 150, 200, 0.2)' },
+    ];
+    
+    for (const dot of dots) {
+      ctx.fillStyle = dot.color;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.r, 0, Math.PI * 2);
+      ctx.fill();
     }
   }
 
@@ -199,25 +229,51 @@ class GameScene {
       btn.render();
     }
 
+    // 顶部卡片背景
+    const cardW = 400, cardH = 90;
+    const cardX = (W - cardW) / 2;
+    const cardY = 20;
+    
+    // 卡片阴影
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    this._roundRect(ctx, cardX + 4, cardY + 6, cardW, cardH, 16);
+    ctx.fill();
+    
+    // 卡片背景
+    ctx.fillStyle = '#FFFFFF';
+    this._roundRect(ctx, cardX, cardY, cardW, cardH, 16);
+    ctx.fill();
+
     // 关卡名
     ctx.fillStyle = '#2C3E50';
-    ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
-    ctx.textAlign = 'center';
+    ctx.font = `bold ${26 * fontScale}px PingFang SC, sans-serif`;
+    ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
-    ctx.fillText(`第 ${this.chapter}-${this.level} 关`, W / 2 - 60, 75);
+    ctx.fillText(`第 ${this.chapter}-${this.level} 关`, cardX + 30, cardY + 35);
 
-    // 计时器
-    ctx.fillStyle = '#8693A6';
-    ctx.font = `${20 * fontScale}px PingFang SC, sans-serif`;
-    const time = this._formatTime(this.elapsedTime);
-    ctx.fillText(`⏱ ${time}`, W / 2 + 60, 75);
-
-    // 方块数量
+    // 进度条背景
+    ctx.fillStyle = '#E0E0E0';
+    this._roundRect(ctx, cardX + 30, cardY + 55, cardW - 60, 14, 7);
+    ctx.fill();
+    
+    // 进度条填充
     const placedCount = this.placedBlocks.length;
     const totalCount = this.blocks.length;
-    ctx.fillStyle = '#FF6B6B';
-    ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
-    ctx.fillText(`${placedCount}/${totalCount}`, W / 2, 110);
+    const progress = totalCount > 0 ? placedCount / totalCount : 0;
+    
+    const gradient = ctx.createLinearGradient(cardX + 30, 0, cardX + 30 + (cardW - 60) * progress, 0);
+    gradient.addColorStop(0, '#5B9DF9');
+    gradient.addColorStop(1, '#6BCB77');
+    ctx.fillStyle = gradient;
+    this._roundRect(ctx, cardX + 30, cardY + 55, (cardW - 60) * progress, 14, 7);
+    ctx.fill();
+
+    // 时间（右上角）
+    ctx.fillStyle = '#8693A6';
+    ctx.font = `${20 * fontScale}px PingFang SC, sans-serif`;
+    ctx.textAlign = 'right';
+    const time = this._formatTime(this.elapsedTime);
+    ctx.fillText(`⏱ ${time}`, W - 30, 60);
   }
 
   _formatTime(seconds) {
@@ -230,65 +286,115 @@ class GameScene {
     const ctx = this.ctx;
     const { targetX, targetY, targetWidth, targetHeight, cellSize } = this;
 
-    // 背景
-    ctx.fillStyle = '#E9ECEF';
-    this._roundRect(ctx, targetX - 20, targetY - 20, 
-      targetWidth * cellSize + 40, targetHeight * cellSize + 40, 20);
+    // 外阴影
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+    this._roundRect(ctx, targetX + 4, targetY + 8, 
+      targetWidth * cellSize + 50, targetHeight * cellSize + 50, 24);
     ctx.fill();
 
-    // 网格（虚线效果）
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+    // 主背景
+    const gradient = ctx.createLinearGradient(targetX, targetY, targetX, targetY + targetHeight * cellSize);
+    gradient.addColorStop(0, '#FFFFFF');
+    gradient.addColorStop(1, '#F5F7FA');
+    ctx.fillStyle = gradient;
+    this._roundRect(ctx, targetX, targetY, 
+      targetWidth * cellSize + 40, targetHeight * cellSize + 40, 22);
+    ctx.fill();
+
+    // 网格线（更精致）
+    ctx.strokeStyle = 'rgba(200, 210, 220, 0.5)';
     ctx.lineWidth = 1;
     
-    for (let r = 0; r <= targetHeight; r++) {
+    for (let r = 1; r < targetHeight; r++) {
       const y = targetY + r * cellSize;
       ctx.beginPath();
-      ctx.moveTo(targetX, y);
-      ctx.lineTo(targetX + targetWidth * cellSize, y);
-      ctx.setLineDash([5, 5]);
+      ctx.moveTo(targetX + 20, y);
+      ctx.lineTo(targetX + targetWidth * cellSize + 20, y);
       ctx.stroke();
-      ctx.setLineDash([]);
     }
     
-    for (let c = 0; c <= targetWidth; c++) {
+    for (let c = 1; c < targetWidth; c++) {
       const x = targetX + c * cellSize;
       ctx.beginPath();
-      ctx.moveTo(x, targetY);
-      ctx.lineTo(x, targetY + targetHeight * cellSize);
-      ctx.setLineDash([5, 5]);
+      ctx.moveTo(x, targetY + 20);
+      ctx.lineTo(x, targetY + targetHeight * cellSize + 20);
       ctx.stroke();
-      ctx.setLineDash([]);
     }
 
-    // 边框
+    // 内边框
+    ctx.strokeStyle = 'rgba(200, 210, 220, 0.8)';
+    ctx.lineWidth = 1;
+    this._roundRect(ctx, targetX + 4, targetY + 4, 
+      targetWidth * cellSize + 32, targetHeight * cellSize + 32, 18);
+    ctx.stroke();
+
+    // 主边框
     ctx.strokeStyle = '#2C3E50';
     ctx.lineWidth = 3;
-    this._roundRect(ctx, targetX - 20, targetY - 20, 
-      targetWidth * cellSize + 40, targetHeight * cellSize + 40, 20);
+    this._roundRect(ctx, targetX, targetY, 
+      targetWidth * cellSize + 40, targetHeight * cellSize + 40, 22);
     ctx.stroke();
+
+    // 角标装饰
+    this._renderCornerBadge();
+  }
+
+  _renderCornerBadge() {
+    const ctx = this.ctx;
+    const badgeW = 80, badgeH = 30;
+    const badgeX = this.targetX + this.targetWidth * this.cellSize + 50 - badgeW - 10;
+    const badgeY = this.targetY - 10;
+    
+    // 渐变背景
+    const gradient = ctx.createLinearGradient(badgeX, 0, badgeX + badgeW, 0);
+    gradient.addColorStop(0, '#FFB400');
+    gradient.addColorStop(1, '#FFD43B');
+    ctx.fillStyle = gradient;
+    this._roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 15);
+    ctx.fill();
+    
+    // 文字
+    ctx.fillStyle = '#2C3E50';
+    ctx.font = `bold ${18 * this.scaleY}px PingFang SC, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`共 ${this.blocks.length} 块`, badgeX + badgeW / 2, badgeY + badgeH / 2);
   }
 
   _renderTray() {
     const ctx = this.ctx;
     const W = this.W;
-    const trayY = this.targetY + this.targetHeight * this.cellSize + 60;
-    const trayH = 150;
+    const trayY = this.targetY + this.targetHeight * this.cellSize + 80;
+    const trayH = 130;
+
+    // 阴影
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    this._roundRect(ctx, 24, trayY + 6, W - 48, trayH, 20);
+    ctx.fill();
 
     // 背景
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, 20, trayY, W - 40, trayH, 20);
     ctx.fill();
 
-    // 标题
+    // 顶部标签
     ctx.fillStyle = '#8693A6';
-    ctx.font = `bold ${20 * this.scaleY}px PingFang SC, sans-serif`;
+    ctx.font = `bold ${18 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
-    ctx.fillText('待放置方块:', 40, trayY + 15);
+    ctx.fillText('📋 待放置:', 40, trayY + 18);
+
+    // 分隔线
+    ctx.strokeStyle = 'rgba(200, 210, 220, 0.8)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(40, trayY + 45);
+    ctx.lineTo(W - 40, trayY + 45);
+    ctx.stroke();
 
     // 方块
     const startX = 40;
-    const gap = 15;
+    const gap = 12;
     let x = startX;
     
     for (const block of this.blocks) {
@@ -298,19 +404,28 @@ class GameScene {
       const blockW = bounds.width * this.cellSize;
       const blockH = bounds.height * this.cellSize;
       
-      block.x = x + (this.cellSize - blockW) / 2;
-      block.y = trayY + 50;
+      // 如果放不下，换行
+      if (x + blockW > W - 60) {
+        x = startX;
+      }
       
-      this._renderBlock(block);
+      block.x = x + (this.cellSize - blockW) / 2;
+      block.y = trayY + 55;
+      
+      this._renderBlock(block, true); // true = 在托盘中
       
       x += blockW + gap;
     }
   }
 
-  _renderBlock(block) {
+  _renderBlock(block, inTray = false) {
     const ctx = this.ctx;
     const cellSize = this.cellSize;
     const bounds = PuzzleGenerator.getBounds(block.shape);
+    
+    // 计算实际尺寸
+    const blockW = bounds.width * cellSize;
+    const blockH = bounds.height * cellSize;
     
     // 绘制每个单元格
     for (let r = bounds.minY; r < bounds.minY + bounds.height; r++) {
@@ -319,66 +434,125 @@ class GameScene {
           const x = block.x + (c - bounds.minX) * cellSize;
           const y = block.y + (r - bounds.minY) * cellSize;
           
-          // 填充
-          ctx.fillStyle = block.color;
-          this._roundRect(ctx, x, y, cellSize * 0.9, cellSize * 0.9, 8);
+          // 渐变填充
+          const gradient = ctx.createLinearGradient(x, y, x, y + cellSize);
+          gradient.addColorStop(0, this._lightenColor(block.color, 0.15));
+          gradient.addColorStop(1, block.color);
+          ctx.fillStyle = gradient;
+          this._roundRect(ctx, x, y, cellSize * 0.92, cellSize * 0.92, 10);
           ctx.fill();
           
           // 高光
-          ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-          this._roundRect(ctx, x + 4, y + 4, cellSize * 0.35, cellSize * 0.35, 4);
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+          this._roundRect(ctx, x + 6, y + 6, cellSize * 0.3, cellSize * 0.3, 5);
           ctx.fill();
           
-          // 边框
-          ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
+          // 内边框
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
           ctx.lineWidth = 1;
-          this._roundRect(ctx, x, y, cellSize * 0.9, cellSize * 0.9, 8);
+          this._roundRect(ctx, x + 2, y + 2, cellSize * 0.92 - 4, cellSize * 0.92 - 4, 8);
           ctx.stroke();
         }
       }
     }
     
-    // 如果是已放置的方块，添加阴影
-    if (block.placed) {
-      ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+    // 外边框阴影效果
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.lineWidth = 2;
+    this._roundRect(ctx, block.x - 3, block.y - 3, blockW + 6, blockH + 6, 14);
+    ctx.stroke();
+    
+    // 如果在托盘中，添加虚线边框表示可拖拽
+    if (inTray) {
+      ctx.strokeStyle = 'rgba(91, 157, 249, 0.6)';
       ctx.lineWidth = 2;
-      this._roundRect(ctx, block.x - 5, block.y - 5, 
-        bounds.width * cellSize + 10, bounds.height * cellSize + 10, 12);
+      ctx.setLineDash([6, 4]);
+      this._roundRect(ctx, block.x - 3, block.y - 3, blockW + 6, blockH + 6, 14);
       ctx.stroke();
+      ctx.setLineDash([]);
     }
+    
+    // 如果已放置，添加阴影
+    if (block.placed && !inTray) {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+      this._roundRect(ctx, block.x + 4, block.y + 6, blockW, blockH, 12);
+      ctx.fill();
+    }
+  }
+
+  // 颜色变亮
+  _lightenColor(color, amount) {
+    const hex = color.replace('#', '');
+    const r = Math.min(255, parseInt(hex.substring(0, 2), 16) + amount * 255);
+    const g = Math.min(255, parseInt(hex.substring(2, 4), 16) + amount * 255);
+    const b = Math.min(255, parseInt(hex.substring(4, 6), 16) + amount * 255);
+    return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
   }
 
   _renderDragPreview() {
     const ctx = this.ctx;
-    if (!this.dragging) return;
+    if (!this.dragging || !this.isDragging) return;
     
     const { block, gridX, gridY, canPlace } = this.dragging;
     const cellSize = this.cellSize;
     const bounds = PuzzleGenerator.getBounds(block.shape);
     
-    // 计算预览位置
-    const previewX = this.targetX + gridX * cellSize;
-    const previewY = this.targetY + gridY * cellSize;
+    // 计算预览位置（在目标区域内）
+    const previewX = this.targetX + 20 + gridX * cellSize;
+    const previewY = this.targetY + 20 + gridY * cellSize;
     
-    // 绘制预览
+    const blockW = bounds.width * cellSize;
+    const blockH = bounds.height * cellSize;
+    
+    // 如果可以放置，显示绿色高亮
+    if (canPlace) {
+      // 背景高亮
+      ctx.fillStyle = 'rgba(76, 175, 80, 0.2)';
+      this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 14);
+      ctx.fill();
+      
+      // 边框
+      ctx.strokeStyle = '#4CAF50';
+      ctx.lineWidth = 3;
+      this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 14);
+      ctx.stroke();
+      
+      // 绘制方块
+      this._renderBlockAtPosition(block, previewX, previewY);
+    } else {
+      // 不可放置，显示红色警告
+      ctx.fillStyle = 'rgba(244, 67, 54, 0.15)';
+      this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 14);
+      ctx.fill();
+      
+      ctx.strokeStyle = '#F44336';
+      ctx.lineWidth = 3;
+      this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 14);
+      ctx.stroke();
+    }
+  }
+
+  _renderBlockAtPosition(block, x, y) {
+    const ctx = this.ctx;
+    const cellSize = this.cellSize;
+    const bounds = PuzzleGenerator.getBounds(block.shape);
+    
     for (let r = bounds.minY; r < bounds.minY + bounds.height; r++) {
       for (let c = bounds.minX; c < bounds.minX + bounds.width; c++) {
         if (block.shape[r][c] === 1) {
-          const x = previewX + (c - bounds.minX) * cellSize;
-          const y = previewY + (r - bounds.minY) * cellSize;
+          const bx = x + (c - bounds.minX) * cellSize;
+          const by = y + (r - bounds.minY) * cellSize;
           
-          if (canPlace) {
-            // 可放置：绿色边框
-            ctx.strokeStyle = '#4CAF50';
-            ctx.lineWidth = 3;
-          } else {
-            // 不可放置：红色边框
-            ctx.strokeStyle = '#F44336';
-            ctx.lineWidth = 3;
-          }
+          const gradient = ctx.createLinearGradient(bx, by, bx, by + cellSize);
+          gradient.addColorStop(0, this._lightenColor(block.color, 0.15));
+          gradient.addColorStop(1, block.color);
+          ctx.fillStyle = gradient;
+          this._roundRect(ctx, bx, by, cellSize * 0.92, cellSize * 0.92, 10);
+          ctx.fill();
           
-          this._roundRect(ctx, x, y, cellSize, cellSize, 8);
-          ctx.stroke();
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+          this._roundRect(ctx, bx + 6, by + 6, cellSize * 0.3, cellSize * 0.3, 5);
+          ctx.fill();
         }
       }
     }
@@ -390,64 +564,101 @@ class GameScene {
     const fontScale = this.scaleY;
 
     // 遮罩
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
     ctx.fillRect(0, 0, W, H);
 
     // 弹层
-    const boxW = 500, boxH = 400;
+    const boxW = 520, boxH = 420;
     const boxX = (W - boxW) / 2;
     const boxY = (H - boxH) / 2;
     
-    ctx.fillStyle = '#FFFFFF';
-    this._roundRect(ctx, boxX, boxY, boxW, boxH, 24);
+    // 阴影
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+    this._roundRect(ctx, boxX + 8, boxY + 12, boxW, boxH, 28);
     ctx.fill();
+    
+    // 背景渐变
+    const gradient = ctx.createLinearGradient(boxX, boxY, boxX, boxY + boxH);
+    gradient.addColorStop(0, '#FFF8E1');
+    gradient.addColorStop(1, '#FFECB3');
+    ctx.fillStyle = gradient;
+    this._roundRect(ctx, boxX, boxY, boxW, boxH, 28);
+    ctx.fill();
+
+    // 顶部装饰
+    ctx.strokeStyle = '#FFB400';
+    ctx.lineWidth = 4;
+    this._roundRect(ctx, boxX, boxY, boxW, boxH, 28);
+    ctx.stroke();
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = `bold ${48 * fontScale}px PingFang SC, sans-serif`;
+    ctx.font = `bold ${52 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('🎉 通关！', W / 2, boxY + 60);
+    ctx.fillText('🎉 恭喜过关！', W / 2, boxY + 70);
 
     // 星级
     ctx.fillStyle = '#FFB400';
-    ctx.font = `${48 * fontScale}px sans-serif`;
+    ctx.font = `${56 * fontScale}px sans-serif`;
     const stars = '⭐'.repeat(this.winState.stars);
-    ctx.fillText(stars, W / 2, boxY + 120);
+    ctx.fillText(stars, W / 2, boxY + 130);
 
     // 时间
     ctx.fillStyle = '#8693A6';
-    ctx.font = `${24 * fontScale}px PingFang SC, sans-serif`;
-    ctx.fillText(`⏱ ${this._formatTime(this.elapsedTime)}`, W / 2, boxY + 170);
+    ctx.font = `${22 * fontScale}px PingFang SC, sans-serif`;
+    ctx.fillText(`⏱ 用时 ${this._formatTime(this.elapsedTime)}`, W / 2, boxY + 175);
+
+    // 分隔线
+    ctx.strokeStyle = 'rgba(200, 150, 50, 0.3)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(boxX + 60, boxY + 200);
+    ctx.lineTo(boxX + boxW - 60, boxY + 200);
+    ctx.stroke();
 
     // 奖励
     ctx.fillStyle = '#2C3E50';
-    ctx.font = `bold ${28 * fontScale}px PingFang SC, sans-serif`;
-    ctx.fillText(`🪙 +${this.winState.reward.coins}  💎 +${this.winState.reward.diamonds}`, W / 2, boxY + 220);
+    ctx.font = `bold ${26 * fontScale}px PingFang SC, sans-serif`;
+    ctx.fillText(`🪙 +${this.winState.reward.coins}`, boxX + 80, boxY + 230);
+    ctx.fillText(`💎 +${this.winState.reward.diamonds}`, boxX + boxW - 80, boxY + 230);
 
     // 按钮区域
-    const btnY = boxY + boxH - 70;
+    const btnY = boxY + boxH - 80;
     const btnW = 200, btnH = 56;
     
     // 下一关按钮
     const btnX1 = (W - btnW) / 2 - 110;
-    ctx.fillStyle = '#FFB400';
+    const gradient1 = ctx.createLinearGradient(btnX1, btnY, btnX1 + btnW, btnY);
+    gradient1.addColorStop(0, '#FFB400');
+    gradient1.addColorStop(1, '#FFD43B');
+    ctx.fillStyle = gradient1;
     this._roundRect(ctx, btnX1, btnY, btnW, btnH, 16);
     ctx.fill();
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
+    ctx.strokeStyle = '#2C3E50';
+    ctx.lineWidth = 2;
+    this._roundRect(ctx, btnX1, btnY, btnW, btnH, 16);
+    ctx.stroke();
+    ctx.fillStyle = '#2C3E50';
+    ctx.font = `bold ${22 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText('下一关 →', btnX1 + btnW / 2, btnY + btnH / 2);
 
     // 返回选关按钮
     const btnX2 = (W - btnW) / 2 + 110;
-    ctx.fillStyle = '#5B9DF9';
+    const gradient2 = ctx.createLinearGradient(btnX2, btnY, btnX2 + btnW, btnY);
+    gradient2.addColorStop(0, '#5B9DF9');
+    gradient2.addColorStop(1, '#7BB8F5');
+    ctx.fillStyle = gradient2;
     this._roundRect(ctx, btnX2, btnY, btnW, btnH, 16);
     ctx.fill();
+    ctx.strokeStyle = '#2C3E50';
+    ctx.lineWidth = 2;
+    this._roundRect(ctx, btnX2, btnY, btnW, btnH, 16);
+    ctx.stroke();
     ctx.fillStyle = '#FFFFFF';
     ctx.fillText('返回选关', btnX2 + btnW / 2, btnY + btnH / 2);
   }
 
-  // 检查方块是否可以放置
   _canPlace(block, gridX, gridY) {
     const bounds = PuzzleGenerator.getBounds(block.shape);
     const { targetWidth, targetHeight, placedBlocks } = this;
@@ -466,7 +677,6 @@ class GameScene {
         const gx = gridX + (c - bounds.minX);
         const gy = gridY + (r - bounds.minY);
         
-        // 检查是否与已放置方块重叠
         for (const pb of placedBlocks) {
           if (this._blockCoversCell(pb, gx, gy)) {
             return false;
@@ -478,7 +688,6 @@ class GameScene {
     return true;
   }
 
-  // 检查已放置方块是否覆盖指定格子
   _blockCoversCell(block, cellX, cellY) {
     const bounds = PuzzleGenerator.getBounds(block.shape);
     
@@ -496,30 +705,24 @@ class GameScene {
     return false;
   }
 
-  // 检查是否胜利
   checkWin() {
     if (this.placedBlocks.length === this.blocks.length && !this.winState) {
-      // 验证所有方块是否正确放置
       if (this._validatePlacement()) {
         const stars = this._calculateStars();
         const reward = this._calculateReward(stars);
         this.winState = { stars, reward, time: this.elapsedTime };
         
-        // 保存进度
         this.databus.setStars(this.chapter, this.level, stars);
         this.databus.addCoins(reward.coins);
         this.databus.addDiamonds(reward.diamonds);
         
-        // 提交到云数据库
         this._submitScoreToCloud();
       }
     }
     return this.winState !== null;
   }
 
-  // 验证放置是否正确
   _validatePlacement() {
-    // 简单验证：检查所有格子都被填满且无重叠
     const filled = new Set();
     
     for (const block of this.placedBlocks) {
@@ -529,7 +732,7 @@ class GameScene {
           if (block.shape[r][c] === 1) {
             const key = `${block.gridX + (c - bounds.minX)},${block.gridY + (r - bounds.minY)}`;
             if (filled.has(key)) {
-              return false; // 重叠
+              return false;
             }
             filled.add(key);
           }
@@ -537,13 +740,12 @@ class GameScene {
       }
     }
     
-    // 检查是否填满了目标区域
     const expected = this.targetWidth * this.targetHeight;
     return filled.size === expected;
   }
 
   _calculateStars() {
-    const baseTime = this.blocks.length * 15; // 每个方块 15 秒
+    const baseTime = this.blocks.length * 15;
     if (this.elapsedTime <= baseTime) return 3;
     if (this.elapsedTime <= baseTime * 1.5) return 2;
     if (this.elapsedTime <= baseTime * 2) return 1;
@@ -595,24 +797,23 @@ class GameScene {
       }
     }
 
-    // 检查是否点击已放置的方块（用于双击旋转）
+    // 检查是否点击已放置的方块
     for (const block of this.placedBlocks) {
       const bounds = PuzzleGenerator.getBounds(block.shape);
       const blockW = bounds.width * this.cellSize;
       const blockH = bounds.height * this.cellSize;
       
-      const blockX = this.targetX + block.gridX * this.cellSize;
-      const blockY = this.targetY + block.gridY * this.cellSize;
+      const blockX = this.targetX + 20 + block.gridX * this.cellSize;
+      const blockY = this.targetY + 20 + block.gridY * this.cellSize;
       
       if (x >= blockX && x <= blockX + blockW && y >= blockY && y <= blockY + blockH) {
-        // 检测双击
+        // 双击检测
         const now = Date.now();
         const dx = x - this.lastTap.x;
         const dy = y - this.lastTap.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         
         if (now - this.lastTap.time < this.tapThreshold && dist < 30) {
-          // 双击：旋转方块
           this._rotatePlacedBlock(block);
         }
         this.lastTap = { x, y, time: now };
@@ -629,18 +830,25 @@ class GameScene {
       const blockH = bounds.height * this.cellSize;
       
       if (x >= block.x && x <= block.x + blockW && y >= block.y && y <= block.y + blockH) {
-        // 检测双击
+        // 双击检测
         const now = Date.now();
         const dx = x - this.lastTap.x;
         const dy = y - this.lastTap.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         
         if (now - this.lastTap.time < this.tapThreshold && dist < 30) {
-          // 双击：旋转方块
           this._rotateBlock(block);
         } else {
-          // 单击：开始拖拽
-          this._startDrag(block, x, y);
+          // 开始拖拽
+          this.isDragging = true;
+          this.dragging = {
+            block,
+            gridX: -1, // 初始不在目标区域
+            gridY: -1,
+            canPlace: false,
+          };
+          this.dragStartPos = { x, y };
+          this.dragOffset = { x: x - block.x, y: y - block.y };
         }
         this.lastTap = { x, y, time: now };
         return;
@@ -648,32 +856,15 @@ class GameScene {
     }
   }
 
-  _startDrag(block, x, y) {
-    const bounds = PuzzleGenerator.getBounds(block.shape);
-    const blockW = bounds.width * this.cellSize;
-    const blockH = bounds.height * this.cellSize;
-    
-    this.dragging = {
-      block,
-      gridX: 0,
-      gridY: 0,
-      canPlace: false,
-    };
-    
-    // 计算拖拽偏移
-    this.dragOffset.x = x - block.x;
-    this.dragOffset.y = y - block.y;
-  }
-
   onTouchMove(x, y) {
-    if (!this.dragging) return;
+    if (!this.isDragging || !this.dragging) return;
     
     const block = this.dragging.block;
     const cellSize = this.cellSize;
     
-    // 计算目标区域内的格子坐标
-    const relX = x - this.targetX;
-    const relY = y - this.targetY;
+    // 计算相对于目标区域的格子坐标
+    const relX = x - this.targetX - 20;
+    const relY = y - this.targetY - 20;
     
     const gridX = Math.floor((relX + cellSize / 2) / cellSize);
     const gridY = Math.floor((relY + cellSize / 2) / cellSize);
@@ -687,11 +878,10 @@ class GameScene {
     // 胜利状态下处理按钮点击
     if (this.winState) {
       const W = this.W, H = this.H;
-      const boxY = (H - 400) / 2;
-      const btnY = boxY + 400 - 70;
+      const boxY = (H - 420) / 2;
+      const btnY = boxY + 420 - 80;
       const btnH = 56;
       
-      // 下一关按钮
       const btnW = 200;
       const btnX1 = (W - btnW) / 2 - 110;
       if (this._rectContains(btnX1, btnY, btnW, btnH, x, y)) {
@@ -702,7 +892,6 @@ class GameScene {
         return;
       }
       
-      // 返回选关按钮
       const btnX2 = (W - btnW) / 2 + 110;
       if (this._rectContains(btnX2, btnY, btnW, btnH, x, y)) {
         if (this._sceneManager) {
@@ -713,17 +902,15 @@ class GameScene {
       return;
     }
     
-    if (this.dragging) {
+    if (this.isDragging && this.dragging) {
       const { block, gridX, gridY, canPlace } = this.dragging;
       
-      if (canPlace) {
-        // 放置方块
+      if (canPlace && gridX >= 0 && gridY >= 0) {
         block.placed = true;
         block.gridX = gridX;
         block.gridY = gridY;
         this.placedBlocks.push(block);
         
-        // 记录历史
         this._pushHistory({
           type: 'place',
           blockId: block.id,
@@ -731,6 +918,7 @@ class GameScene {
         });
       }
       
+      this.isDragging = false;
       this.dragging = null;
     }
     
@@ -741,7 +929,6 @@ class GameScene {
     return px >= x && px <= x + w && py >= y && py <= y + h;
   }
 
-  // 旋转托盘中的方块
   _rotateBlock(block) {
     const oldShape = block.shape;
     block.shape = PuzzleGenerator._rotate90(block.shape);
@@ -754,7 +941,6 @@ class GameScene {
     });
   }
 
-  // 旋转已放置的方块
   _rotatePlacedBlock(block) {
     const oldShape = block.shape;
     const oldGridX = block.gridX;
@@ -763,7 +949,6 @@ class GameScene {
     block.shape = PuzzleGenerator._rotate90(block.shape);
     block.rotation = (block.rotation + 1) % 4;
     
-    // 调整位置以保持方块在目标区域内
     const bounds = PuzzleGenerator.getBounds(block.shape);
     if (block.gridX + bounds.width > this.targetWidth) {
       block.gridX = this.targetWidth - bounds.width;
@@ -774,10 +959,8 @@ class GameScene {
     if (block.gridX < 0) block.gridX = 0;
     if (block.gridY < 0) block.gridY = 0;
     
-    // 检查是否与其它方块重叠
     let attempts = 0;
     while (this._checkOverlap(block) && attempts < 100) {
-      // 尝试移动到不重叠的位置
       block.gridX = Math.floor(Math.random() * (this.targetWidth - bounds.width + 1));
       block.gridY = Math.floor(Math.random() * (this.targetHeight - bounds.height + 1));
       attempts++;
@@ -792,7 +975,6 @@ class GameScene {
     });
   }
 
-  // 检查是否与其它方块重叠
   _checkOverlap(block) {
     const bounds = PuzzleGenerator.getBounds(block.shape);
     for (const pb of this.placedBlocks) {
@@ -837,14 +1019,12 @@ class GameScene {
     }
   }
 
-  // 撤销操作
   _undo() {
     if (this.history.length === 0) return;
     
     const last = this.history.pop();
     
     if (last.type === 'place') {
-      // 取消放置
       const block = this.blocks.find(b => b.id === last.blockId);
       if (block) {
         block.placed = false;
@@ -852,14 +1032,12 @@ class GameScene {
         if (idx > -1) this.placedBlocks.splice(idx, 1);
       }
     } else if (last.type === 'rotate') {
-      // 撤销旋转
       const block = this.blocks.find(b => b.id === last.blockId);
       if (block) {
         block.shape = last.oldShape;
         block.rotation = (block.rotation - 1 + 4) % 4;
       }
     } else if (last.type === 'rotatePlaced') {
-      // 撤销已放置方块的旋转
       const block = this.blocks.find(b => b.id === last.blockId);
       if (block) {
         block.shape = last.oldShape;
@@ -870,7 +1048,6 @@ class GameScene {
     }
   }
 
-  // 记录历史
   _pushHistory(action) {
     this.history.push(action);
     if (this.history.length > this.maxHistory) {
@@ -878,13 +1055,10 @@ class GameScene {
     }
   }
 
-  // 自动放置一个方块（提示功能）
   _autoPlaceOne() {
-    // 找到第一个未放置的方块
     const unplaced = this.blocks.filter(b => !b.placed);
     if (unplaced.length === 0) return;
     
-    // 从正确答案中找到该方块的放置位置
     const block = unplaced[0];
     const placement = this.placements.find(p => 
       JSON.stringify(block.shape) === JSON.stringify(PuzzleGenerator._rotateShape(
