@@ -20,6 +20,7 @@ class GameScene {
     this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
+    this.fontScale = Math.min(scaleX, scaleY);
     this.init();
   }
 
@@ -36,18 +37,18 @@ class GameScene {
     this.placements = puzzle.placements;
     this.totalCells = puzzle.totalCells;
 
-    // 计算格子大小 - 根据屏幕适配
+    // 计算格子大小 - 根据缩放适配
     const maxCellSize = Math.min(
       (this.W - 100) / BOARD_SIZE,
       (this.H - 500) / BOARD_SIZE
     );
-    this.cellSize = Math.max(35, Math.floor(maxCellSize));
+    this.cellSize = Math.max(35, Math.floor(maxCellSize * Math.min(this.scaleX, this.scaleY)));
     
     // 游戏区域位置（居中）
     const boardW = BOARD_SIZE * this.cellSize;
     const boardH = BOARD_SIZE * this.cellSize;
     this.boardX = (this.W - boardW) / 2;
-    this.boardY = 100;
+    this.boardY = 120;
     
     // 已放置的方块
     this.placedBlocks = [];
@@ -55,7 +56,6 @@ class GameScene {
     // 拖拽状态
     this.dragging = null;
     this.isDragging = false;
-    this.dragStartPos = { x: 0, y: 0 };
     this.dragOffset = { x: 0, y: 0 };
     
     // 撤销栈
@@ -94,7 +94,7 @@ class GameScene {
     const startX = 30;
     const startY = this.H - 110;
     const gap = 20;
-    const fontScale = this.scaleY;
+    const fontScale = this.fontScale;
     
     // 提示按钮
     this.toolButtons.push(
@@ -126,14 +126,14 @@ class GameScene {
     this.topButtons.push(
       new Button(this.ctx, 30, 30, 100, 60, '◀ 返回', {
         bg: '#FFFFFF',
-        fontSize: 22 * this.scaleY,
+        fontSize: 22 * this.fontScale,
       })
     );
     // 重置按钮
     this.topButtons.push(
       new Button(this.ctx, this.W - 100 - 30, 30, 100, 60, '🔄 重置', {
         bg: '#FFFFFF',
-        fontSize: 22 * this.scaleY,
+        fontSize: 22 * this.fontScale,
       })
     );
   }
@@ -156,10 +156,10 @@ class GameScene {
     // 顶栏
     this._renderTopBar();
 
-    // 游戏区域（10x10 网格）
+    // 游戏区域
     this._renderBoard();
 
-    // 放置区域轮廓（带阴影）
+    // 放置区域轮廓
     this._renderPlacementArea();
 
     // 已放置的方块
@@ -203,7 +203,7 @@ class GameScene {
   _renderTopBar() {
     const ctx = this.ctx;
     const W = this.W;
-    const fontScale = this.scaleY;
+    const fontScale = this.fontScale;
 
     // 返回按钮
     for (const btn of this.topButtons) {
@@ -280,7 +280,7 @@ class GameScene {
     ctx.fill();
 
     // 绘制 10x10 网格
-    ctx.strokeStyle = 'rgba(200, 210, 220, 0.6)';
+    ctx.strokeStyle = 'rgba(200, 210, 220, 0.5)';
     ctx.lineWidth = 1;
     
     for (let r = 1; r < BOARD_SIZE; r++) {
@@ -364,7 +364,7 @@ class GameScene {
 
     // 标题
     ctx.fillStyle = '#8693A6';
-    ctx.font = `bold ${18 * this.scaleY}px PingFang SC, sans-serif`;
+    ctx.font = `bold ${18 * this.fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
     ctx.fillText('📋 待放置:', 40, trayY + 18);
@@ -408,14 +408,12 @@ class GameScene {
     const cellSize = this.cellSize;
     const bounds = PuzzleGenerator.getBounds(block.shape);
     
-    // 计算实际尺寸
     const blockW = bounds.width * cellSize;
     const blockH = bounds.height * cellSize;
     
     // 计算方块的实际位置
     let blockX, blockY;
     if (block.placed && !inTray) {
-      // 已放置的方块：根据 gridX 和 gridY 计算位置
       blockX = this.boardX + 20 + block.gridX * cellSize;
       blockY = this.boardY + 20 + block.gridY * cellSize;
     } else {
@@ -476,7 +474,6 @@ class GameScene {
     }
   }
 
-  // 颜色变亮
   _lightenColor(color, amount) {
     const hex = color.replace('#', '');
     const r = Math.min(255, parseInt(hex.substring(0, 2), 16) + amount * 255);
@@ -493,7 +490,6 @@ class GameScene {
     const cellSize = this.cellSize;
     const bounds = PuzzleGenerator.getBounds(block.shape);
     
-    // 计算预览位置
     const previewX = this.boardX + 20 + gridX * cellSize;
     const previewY = this.boardY + 20 + gridY * cellSize;
     
@@ -501,7 +497,6 @@ class GameScene {
     const blockH = bounds.height * cellSize;
     
     if (canPlace) {
-      // 可放置：绿色高亮
       ctx.fillStyle = 'rgba(76, 175, 80, 0.2)';
       this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 12);
       ctx.fill();
@@ -511,10 +506,8 @@ class GameScene {
       this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 12);
       ctx.stroke();
       
-      // 绘制方块
       this._renderBlockAtPosition(block, previewX, previewY);
     } else {
-      // 不可放置：红色警告
       ctx.fillStyle = 'rgba(244, 67, 54, 0.15)';
       this._roundRect(ctx, previewX - 4, previewY - 4, blockW + 8, blockH + 8, 12);
       ctx.fill();
@@ -555,13 +548,11 @@ class GameScene {
   _renderWinOverlay() {
     const ctx = this.ctx;
     const W = this.W, H = this.H;
-    const fontScale = this.scaleY;
+    const fontScale = this.fontScale;
 
-    // 遮罩
     ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
     ctx.fillRect(0, 0, W, H);
 
-    // 弹层
     const boxW = 520, boxH = 420;
     const boxX = (W - boxW) / 2;
     const boxY = (H - boxH) / 2;
@@ -646,13 +637,11 @@ class GameScene {
     const bounds = PuzzleGenerator.getBounds(block.shape);
     const { placementArea, placedBlocks } = this;
     
-    // 边界检查
     if (gridX < 0 || gridY < 0) return false;
     if (gridX + bounds.width > BOARD_SIZE || gridY + bounds.height > BOARD_SIZE) {
       return false;
     }
     
-    // 检查是否在放置区域内
     for (let r = bounds.minY; r < bounds.minY + bounds.height; r++) {
       for (let c = bounds.minX; c < bounds.minX + bounds.width; c++) {
         if (block.shape[r][c] !== 1) continue;
@@ -660,12 +649,8 @@ class GameScene {
         const gx = gridX + (c - bounds.minX);
         const gy = gridY + (r - bounds.minY);
         
-        // 必须在放置区域内
-        if (placementArea[gy][gx] !== 1) {
-          return false;
-        }
+        if (placementArea[gy][gx] !== 1) return false;
         
-        // 不能与已放置的方块重叠
         for (const pb of placedBlocks) {
           if (this._blockCoversCell(pb, gx, gy)) {
             return false;
@@ -712,7 +697,6 @@ class GameScene {
   }
 
   _validatePlacement() {
-    // 检查是否填满了放置区域
     const filled = new Set();
     
     for (const block of this.placedBlocks) {
@@ -721,23 +705,18 @@ class GameScene {
         for (let c = bounds.minX; c < bounds.minX + bounds.width; c++) {
           if (block.shape[r][c] === 1) {
             const key = `${block.gridX + (c - bounds.minX)},${block.gridY + (r - bounds.minY)}`;
-            if (filled.has(key)) {
-              return false;
-            }
+            if (filled.has(key)) return false;
             filled.add(key);
           }
         }
       }
     }
     
-    // 检查是否填满了放置区域
     for (let r = 0; r < BOARD_SIZE; r++) {
       for (let c = 0; c < BOARD_SIZE; c++) {
         if (this.placementArea[r][c] === 1) {
           const key = `${c},${r}`;
-          if (!filled.has(key)) {
-            return false; // 放置区域有空格
-          }
+          if (!filled.has(key)) return false;
         }
       }
     }
@@ -782,23 +761,25 @@ class GameScene {
   }
 
   onTouchStart(x, y) {
-    // 检查顶部按钮
+    // 转换为设计坐标
+    const designX = x / this.scaleX;
+    const designY = y / this.scaleY;
+
     for (const btn of this.topButtons) {
-      if (btn.hitTest(x, y)) {
+      if (btn.hitTest(designX, designY)) {
         this._handleTopButtonClick(btn.label);
         return;
       }
     }
 
-    // 检查工具栏
     for (const btn of this.toolButtons) {
-      if (btn.hitTest(x, y)) {
+      if (btn.hitTest(designX, designY)) {
         this._handleToolButtonClick(btn.label);
         return;
       }
     }
 
-    // 检查是否点击已放置的方块
+    // 检查已放置的方块
     for (const block of this.placedBlocks) {
       const bounds = PuzzleGenerator.getBounds(block.shape);
       const blockW = bounds.width * this.cellSize;
@@ -807,16 +788,16 @@ class GameScene {
       const blockX = this.boardX + 20 + block.gridX * this.cellSize;
       const blockY = this.boardY + 20 + block.gridY * this.cellSize;
       
-      if (x >= blockX && x <= blockX + blockW && y >= blockY && y <= blockY + blockH) {
+      if (designX >= blockX && designX <= blockX + blockW && designY >= blockY && designY <= blockY + blockH) {
         const now = Date.now();
-        const dx = x - this.lastTap.x;
-        const dy = y - this.lastTap.y;
+        const dx = designX - this.lastTap.x;
+        const dy = designY - this.lastTap.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         
         if (now - this.lastTap.time < this.tapThreshold && dist < 30) {
           this._rotatePlacedBlock(block);
         }
-        this.lastTap = { x, y, time: now };
+        this.lastTap = { x: designX, y: designY, time: now };
         return;
       }
     }
@@ -829,10 +810,10 @@ class GameScene {
       const blockW = bounds.width * this.cellSize;
       const blockH = bounds.height * this.cellSize;
       
-      if (x >= block.x && x <= block.x + blockW && y >= block.y && y <= block.y + blockH) {
+      if (designX >= block.x && designX <= block.x + blockW && designY >= block.y && designY <= block.y + blockH) {
         const now = Date.now();
-        const dx = x - this.lastTap.x;
-        const dy = y - this.lastTap.y;
+        const dx = designX - this.lastTap.x;
+        const dy = designY - this.lastTap.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         
         if (now - this.lastTap.time < this.tapThreshold && dist < 30) {
@@ -845,10 +826,9 @@ class GameScene {
             gridY: -1,
             canPlace: false,
           };
-          this.dragStartPos = { x, y };
-          this.dragOffset = { x: x - block.x, y: y - block.y };
+          this.dragOffset = { x: designX - block.x, y: designY - block.y };
         }
-        this.lastTap = { x, y, time: now };
+        this.lastTap = { x: designX, y: designY, time: now };
         return;
       }
     }
@@ -857,11 +837,14 @@ class GameScene {
   onTouchMove(x, y) {
     if (!this.isDragging || !this.dragging) return;
     
+    const designX = x / this.scaleX;
+    const designY = y / this.scaleY;
+    
     const block = this.dragging.block;
     const cellSize = this.cellSize;
     
-    const relX = x - this.boardX - 20;
-    const relY = y - this.boardY - 20;
+    const relX = designX - this.boardX - 20;
+    const relY = designY - this.boardY - 20;
     
     const gridX = Math.floor((relX + cellSize / 2) / cellSize);
     const gridY = Math.floor((relY + cellSize / 2) / cellSize);
@@ -878,9 +861,12 @@ class GameScene {
       const btnY = boxY + 420 - 80;
       const btnH = 56;
       
+      const designX = x / this.scaleX;
+      const designY = y / this.scaleY;
+      
       const btnW = 200;
       const btnX1 = (W - btnW) / 2 - 110;
-      if (this._rectContains(btnX1, btnY, btnW, btnH, x, y)) {
+      if (this._rectContains(btnX1, btnY, btnW, btnH, designX, designY)) {
         const next = this.databus.getNextLevel(this.params.chapter, this.params.level);
         if (this._sceneManager) {
           this._sceneManager.go('game', next);
@@ -889,7 +875,7 @@ class GameScene {
       }
       
       const btnX2 = (W - btnW) / 2 + 110;
-      if (this._rectContains(btnX2, btnY, btnW, btnH, x, y)) {
+      if (this._rectContains(btnX2, btnY, btnW, btnH, designX, designY)) {
         if (this._sceneManager) {
           this._sceneManager.go('select');
         }
@@ -946,12 +932,8 @@ class GameScene {
     block.rotation = (block.rotation + 1) % 4;
     
     const bounds = PuzzleGenerator.getBounds(block.shape);
-    if (block.gridX + bounds.width > BOARD_SIZE) {
-      block.gridX = BOARD_SIZE - bounds.width;
-    }
-    if (block.gridY + bounds.height > BOARD_SIZE) {
-      block.gridY = BOARD_SIZE - bounds.height;
-    }
+    if (block.gridX + bounds.width > BOARD_SIZE) block.gridX = BOARD_SIZE - bounds.width;
+    if (block.gridY + bounds.height > BOARD_SIZE) block.gridY = BOARD_SIZE - bounds.height;
     if (block.gridX < 0) block.gridX = 0;
     if (block.gridY < 0) block.gridY = 0;
     
@@ -980,9 +962,7 @@ class GameScene {
           if (block.shape[r][c] === 1) {
             const gx = block.gridX + (c - bounds.minX);
             const gy = block.gridY + (r - bounds.minY);
-            if (this._blockCoversCell(pb, gx, gy)) {
-              return true;
-            }
+            if (this._blockCoversCell(pb, gx, gy)) return true;
           }
         }
       }
@@ -992,9 +972,7 @@ class GameScene {
 
   _handleTopButtonClick(label) {
     if (label === '◀ 返回') {
-      if (this._sceneManager) {
-        this._sceneManager.back();
-      }
+      if (this._sceneManager) this._sceneManager.back();
     } else if (label === '🔄 重置') {
       this.init();
     }
