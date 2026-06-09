@@ -1,3 +1,7 @@
-import Main from './js/main';
+/**
+ * 方块大师 - 微信小游戏入口
+ */
+const { start } = require('./js/main.js');
 
-new Main();
+// 启动游戏
+start();

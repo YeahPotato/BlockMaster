@@ -1,0 +1,13 @@
+{
+  "name": "block-master-cloud",
+  "version": "1.0.0",
+  "description": "方块大师云函数",
+  "main": "index.js",
+  "scripts": {
+    "upload": "tcb cloudfunc deploy --name blockMaster -e $env",
+    "deploy": "tcb cloudfunc deploy --name blockMaster -e $env"
+  },
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

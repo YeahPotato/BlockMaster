@@ -1,89 +1,114 @@
-import Sprite from './sprite';
-
-const __ = {
-  timer: Symbol('timer'),
-};
-
 /**
- * 简易的帧动画类实现
+ * 方块大师 - 动画管理
  */
-export default class Animation extends Sprite {
-  constructor(imgSrc, width, height) {
-    super(imgSrc, width, height);
-
-    this.isPlaying = false; // 当前动画是否播放中
-    this.loop = false; // 动画是否需要循环播放
-    this.interval = 1000 / 60; // 每一帧的时间间隔
-    this[__.timer] = null; // 帧定时器
-    this.index = -1; // 当前播放的帧
-    this.count = 0; // 总帧数
-    this.imgList = []; // 帧图片集合
+class Animation {
+  constructor(duration, onComplete = null) {
+    this.duration = duration;
+    this.elapsed = 0;
+    this.running = false;
+    this.onComplete = onComplete;
+    this.easing = this.easeOutCubic;
   }
 
-  /**
-   * 初始化帧动画的所有帧
-   * @param {Array} imgList - 帧图片的路径数组
-   */
-  initFrames(imgList) {
-    this.imgList = imgList.map((src) => {
-      const img = wx.createImage();
-      img.src = src;
-      return img;
-    });
-
-    this.count = imgList.length;
-
-    // 推入到全局动画池，便于全局绘图的时候遍历和绘制当前动画帧
-    GameGlobal.databus.animations.push(this);
+  easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
   }
 
-  // 将播放中的帧绘制到canvas上
-  aniRender(ctx) {
-    if (this.index >= 0 && this.index < this.count) {
-      ctx.drawImage(
-        this.imgList[this.index],
-        this.x,
-        this.y,
-        this.width * 1.2,
-        this.height * 1.2
-      );
+  easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  easeOutQuad(t) {
+    return 1 - (1 - t) * (1 - t);
+  }
+
+  start() {
+    this.elapsed = 0;
+    this.running = true;
+  }
+
+  stop() {
+    this.running = false;
+  }
+
+  update(dt) {
+    if (!this.running) return false;
+    this.elapsed += dt;
+    if (this.elapsed >= this.duration) {
+      this.elapsed = this.duration;
+      this.running = false;
+      if (this.onComplete) this.onComplete();
     }
+    return true;
   }
 
-  // 播放预定的帧动画
-  playAnimation(index = 0, loop = false) {
-    this.visible = false; // 动画播放时隐藏精灵图
-    this.isPlaying = true;
-    this.loop = loop;
-    this.index = index;
-
-    if (this.interval > 0 && this.count) {
-      this[__.timer] = setInterval(this.frameLoop.bind(this), this.interval);
-    }
+  progress() {
+    return Math.min(1, this.elapsed / this.duration);
   }
 
-  // 停止帧动画播放
-  stopAnimation() {
-    this.isPlaying = false;
-    this.index = -1;
-    if (this[__.timer]) {
-      clearInterval(this[__.timer]);
-      this[__.timer] = null; // 清空定时器引用
-      this.emit('stopAnimation');
-    }
-  }
-
-  // 帧遍历
-  frameLoop() {
-    this.index++;
-
-    if (this.index >= this.count) {
-      if (this.loop) {
-        this.index = 0; // 循环播放
-      } else {
-        this.index = this.count - 1; // 保持在最后一帧
-        this.stopAnimation(); // 停止播放
-      }
-    }
+  value(start, end) {
+    const t = this.easing(this.progress());
+    return start + (end - start) * t;
   }
 }
+
+class Tween {
+  constructor(target, props, duration, easing = 'easeOutCubic', onComplete = null) {
+    this.target = target;
+    this.props = props;
+    this.duration = duration;
+    this.easing = this._easings[easing] || this._easings.easeOutCubic;
+    this.onComplete = onComplete;
+    this.startProps = {};
+    this.elapsed = 0;
+    this.running = false;
+    this._initStartProps();
+  }
+
+  _easings = {
+    linear: (t) => t,
+    easeOutCubic: (t) => 1 - Math.pow(1 - t, 3),
+    easeInOutCubic: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2),
+    easeOutQuad: (t) => 1 - (1 - t) * (1 - t),
+  };
+
+  _initStartProps() {
+    for (const key in this.props) {
+      this.startProps[key] = this.target[key];
+    }
+  }
+
+  start() {
+    this._initStartProps();
+    this.elapsed = 0;
+    this.running = true;
+  }
+
+  stop() {
+    this.running = false;
+  }
+
+  update(dt) {
+    if (!this.running) return false;
+    this.elapsed += dt;
+    if (this.elapsed >= this.duration) {
+      this.elapsed = this.duration;
+      this.running = false;
+      // 设置最终值
+      for (const key in this.props) {
+        this.target[key] = this.props[key];
+      }
+      if (this.onComplete) this.onComplete();
+    } else {
+      const t = this.easing(this.elapsed / this.duration);
+      for (const key in this.props) {
+        const start = this.startProps[key];
+        const end = this.props[key];
+        this.target[key] = start + (end - start) * t;
+      }
+    }
+    return true;
+  }
+}
+
+module.exports = { Animation, Tween };
