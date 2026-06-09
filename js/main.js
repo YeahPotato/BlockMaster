@@ -13,8 +13,9 @@ let ctx;
 let databus;
 let sceneManager;
 let lastTime = 0;
-// 缩放比例（以短边为基准，保证不变形）
-let scale = 1;
+// 缩放比例
+let scaleX = 1;
+let scaleY = 1;
 
 function initCanvas() {
   canvas = wx.createCanvas();
@@ -24,19 +25,20 @@ function initCanvas() {
   const sysInfo = wx.getSystemInfoSync();
   const screenWidth = sysInfo.screenWidth;
   const screenHeight = sysInfo.screenHeight;
+  const dpr = sysInfo.pixelRatio || 1;
   
-  console.log(`屏幕尺寸: ${screenWidth}x${screenHeight}`);
+  console.log(`屏幕尺寸: ${screenWidth}x${screenHeight}, DPR: ${dpr}`);
   
   // 计算缩放比例（以短边为基准，保证比例不变形）
-  const scaleX = screenWidth / DESIGN_W;
-  const scaleY = screenHeight / DESIGN_H;
-  scale = Math.min(scaleX, scaleY);
+  scaleX = screenWidth / DESIGN_W;
+  scaleY = screenHeight / DESIGN_H;
+  const scale = Math.min(scaleX, scaleY);
   
-  // 设置 canvas 实际像素尺寸（设计稿原始尺寸）
-  canvas.width = DESIGN_W;
-  canvas.height = DESIGN_H;
+  // 设置 canvas 实际像素尺寸为屏幕尺寸（保证填满屏幕）
+  canvas.width = screenWidth;
+  canvas.height = screenHeight;
   
-  console.log(`缩放比例: ${scale.toFixed(3)}`);
+  console.log(`Canvas 尺寸: ${canvas.width}x${canvas.height}, 缩放: ${scale.toFixed(3)}`);
 }
 
 function initGame() {
@@ -44,7 +46,7 @@ function initGame() {
   sceneManager = new SceneManager(ctx, databus);
   
   // 设置缩放比例
-  sceneManager.setScale(scale);
+  sceneManager.setScale(scaleX, scaleY);
   
   // 设置 sceneManager 引用到当前全局，方便场景间通信
   window._bmSceneMgr = sceneManager;

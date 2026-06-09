@@ -7,11 +7,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class SettingsScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -88,7 +89,7 @@ class SettingsScene {
     this.buttons.push(
       new Button(this.ctx, startX, startY, btnW, btnH, '⚠ 重置游戏数据', {
         bg: '#FF6B6B',
-        fontSize: 28,
+        fontSize: 28 * this.scaleY,
       })
     );
   }
@@ -126,7 +127,7 @@ class SettingsScene {
 
     // 版本号
     ctx.fillStyle = '#8693A6';
-    ctx.font = '16px PingFang SC, sans-serif';
+    ctx.font = `${16 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('v1.0.0', W / 2, H - 40);
@@ -134,20 +135,21 @@ class SettingsScene {
 
   _renderHeader() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     
     // 返回按钮
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, 30, 40, 110, 70, 24);
     ctx.fill();
     ctx.fillStyle = '#2C3E50';
-    ctx.font = '24px sans-serif';
+    ctx.font = `${24 * fontScale}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('◀ 返回', 85, 75);
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 40px PingFang SC, sans-serif';
+    ctx.font = `bold ${40 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.fillText('设 置', W / 2, 75);
   }
@@ -169,9 +171,10 @@ class SettingsScene {
   _renderItem(item) {
     const ctx = this.ctx;
     const W = this.W;
+    const fontScale = this.scaleY;
 
     // 图标
-    ctx.font = '32px sans-serif';
+    ctx.font = `${32 * fontScale}px sans-serif`;
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
     ctx.fillText(item.icon, 60, item.y + 40);
@@ -192,12 +195,12 @@ class SettingsScene {
       ctx.fill();
       
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = 'bold 24px sans-serif';
+      ctx.font = `bold ${24 * this.scaleY}px sans-serif`;
       ctx.textAlign = 'center';
       ctx.fillText(item.value ? 'ON' : 'OFF', switchX + switchW / 2, switchY + switchH / 2);
     } else if (item.type === 'text') {
       ctx.fillStyle = '#8693A6';
-      ctx.font = '24px PingFang SC, sans-serif';
+      ctx.font = `${24 * this.scaleY}px PingFang SC, sans-serif`;
       ctx.textAlign = 'right';
       ctx.fillText(item.value + ' ▶', W - 80, item.y + 40);
     }

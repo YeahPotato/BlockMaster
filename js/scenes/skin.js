@@ -7,11 +7,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class SkinScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -101,20 +102,21 @@ class SkinScene {
 
   _renderHeader() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     
     // 返回按钮
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, 30, 40, 110, 70, 24);
     ctx.fill();
     ctx.fillStyle = '#2C3E50';
-    ctx.font = '24px sans-serif';
+    ctx.font = `${24 * fontScale}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('◀ 返回', 85, 75);
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 40px PingFang SC, sans-serif';
+    ctx.font = `bold ${40 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.fillText('皮 肤 商 店', this.W / 2, 75);
   }
@@ -153,7 +155,8 @@ class SkinScene {
       this._roundRect(ctx, x + 12, y + 12, 92, 28, 14);
       ctx.fill();
       ctx.fillStyle = badgeTextColors[level];
-      ctx.font = 'bold 16px PingFang SC, sans-serif';
+      const fontScale = this.scaleY;
+      ctx.font = `bold ${16 * fontScale}px PingFang SC, sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(levelNames[level], x + 58, y + 26);
@@ -191,7 +194,7 @@ class SkinScene {
 
       // 皮肤名
       ctx.fillStyle = owned ? '#2C3E50' : '#8693A6';
-      ctx.font = 'bold 22px PingFang SC, sans-serif';
+      ctx.font = `bold ${22 * fontScale}px PingFang SC, sans-serif`;
       ctx.textAlign = 'center';
       ctx.fillText(name, x + w / 2, y + 165);
 
@@ -217,7 +220,7 @@ class SkinScene {
       this._roundRect(ctx, btnX, btnY, btnW, btnH, 12);
       ctx.fill();
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = 'bold 18px PingFang SC, sans-serif';
+      ctx.font = `bold ${18 * fontScale}px PingFang SC, sans-serif`;
       ctx.fillText(btnText, x + w / 2, btnY + 24);
     }
   }
@@ -225,7 +228,7 @@ class SkinScene {
   _renderFooter() {
     const ctx = this.ctx;
     ctx.fillStyle = '#8693A6';
-    ctx.font = '18px PingFang SC, sans-serif';
+    ctx.font = `${18 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('↓ 下滑查看更多 ↓', this.W / 2, this.H - 30);

@@ -7,11 +7,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class DailyScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -101,20 +102,21 @@ class DailyScene {
 
   _renderHeader() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     
     // 返回按钮
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, 30, 40, 110, 70, 24);
     ctx.fill();
     ctx.fillStyle = '#2C3E50';
-    ctx.font = '24px sans-serif';
+    ctx.font = `${24 * fontScale}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('◀ 返回', 85, 75);
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 40px PingFang SC, sans-serif';
+    ctx.font = `bold ${40 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.fillText('每 日 签 到', this.W / 2, 75);
   }
@@ -136,9 +138,10 @@ class DailyScene {
   _renderStreak() {
     const ctx = this.ctx;
     const streak = this.databus.save.dailyCheckIn.streak;
+    const fontScale = this.scaleY;
     
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 32px PingFang SC, sans-serif';
+    ctx.font = `bold ${32 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(`连续签到第 ${streak} 天 ${streak >= 3 ? '🔥' : ''}`, this.W / 2, 180);
@@ -146,6 +149,7 @@ class DailyScene {
 
   _renderRewardGrid() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     const W = this.W;
     const cellW = 90, cellH = 110;
     const cols = 7;
@@ -169,7 +173,7 @@ class DailyScene {
 
       // 天数
       ctx.fillStyle = '#2C3E50';
-      ctx.font = 'bold 24px PingFang SC, sans-serif';
+      ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(`${i + 1}`, x + cellW / 2, y + 35);
@@ -177,22 +181,22 @@ class DailyScene {
       // 状态
       if (i < today) {
         ctx.fillStyle = '#6BCB77';
-        ctx.font = '24px sans-serif';
+        ctx.font = `${24 * fontScale}px sans-serif`;
         ctx.fillText('✓', x + cellW / 2, y + 70);
       } else if (i === today) {
         ctx.fillStyle = '#FFB400';
-        ctx.font = '24px sans-serif';
+        ctx.font = `${24 * fontScale}px sans-serif`;
         ctx.fillText('👉', x + cellW / 2, y + 70);
       } else {
         ctx.fillStyle = '#8693A6';
-        ctx.font = '24px sans-serif';
+        ctx.font = `${24 * fontScale}px sans-serif`;
         ctx.fillText('🔒', x + cellW / 2, y + 70);
       }
 
       // 奖励
       const reward = this.rewards[i];
       ctx.fillStyle = '#2C3E50';
-      ctx.font = '18px PingFang SC, sans-serif';
+      ctx.font = `${18 * fontScale}px PingFang SC, sans-serif`;
       ctx.fillText(reward.label, x + cellW / 2, y + 95);
     }
   }

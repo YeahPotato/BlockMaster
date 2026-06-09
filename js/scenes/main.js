@@ -8,11 +8,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class MainScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -35,7 +36,7 @@ class MainScene {
     this.buttons.push(
       new Button(this.ctx, startX, startY, btnW, btnH, '▶ 开始游戏', {
         bg: '#FFB400',
-        fontSize: 40,
+        fontSize: 40 * this.scaleY,
       })
     );
 
@@ -44,26 +45,26 @@ class MainScene {
     this.buttons.push(
       new Button(this.ctx, startX + 20, startY + btnH + gap + 20, smallW, smallH, '📅 签到', {
         bg: '#5B9DF9',
-        fontSize: 28,
+        fontSize: 28 * this.scaleY,
       })
     );
     this.buttons.push(
       new Button(this.ctx, startX + smallW + 20, startY + btnH + gap + 20, smallW, smallH, '🎁 挑战', {
         bg: '#6BCB77',
-        fontSize: 28,
+        fontSize: 28 * this.scaleY,
       })
     );
 
     this.buttons.push(
       new Button(this.ctx, startX + 20, startY + btnH + gap + 20 + smallH + 12, smallW, smallH, '🎨 皮肤', {
         bg: '#B084EE',
-        fontSize: 28,
+        fontSize: 28 * this.scaleY,
       })
     );
     this.buttons.push(
       new Button(this.ctx, startX + smallW + 20, startY + btnH + gap + 20 + smallH + 12, smallW, smallH, '📊 排行榜', {
         bg: '#FF8B6B',
-        fontSize: 28,
+        fontSize: 28 * this.scaleY,
       })
     );
   }
@@ -146,21 +147,22 @@ class MainScene {
     const ctx = this.ctx;
     const W = this.W;
     const bounce = this.titleBounce;
+    const fontScale = this.scaleY;
 
     // Emoji
-    ctx.font = '120px sans-serif';
+    ctx.font = `${120 * fontScale}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('🧩', W / 2, 220 + bounce);
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 64px PingFang SC, sans-serif';
+    ctx.font = `bold ${64 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText('方块大师', W / 2, 340 + bounce);
 
     // 副标
     ctx.fillStyle = '#8693A6';
-    ctx.font = '24px PingFang SC, sans-serif';
+    ctx.font = `${24 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText('Block Master', W / 2, 380 + bounce);
   }
 
@@ -170,7 +172,7 @@ class MainScene {
     const totalStars = this.databus.getTotalStars();
     const text = `已通关 ${this.databus.save.currentLevel || '1-1'} 关 · ⭐ ${totalStars}`;
     ctx.fillStyle = '#2C3E50';
-    ctx.font = '20px PingFang SC, sans-serif';
+    ctx.font = `${20 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(text, W / 2, 440);
@@ -179,7 +181,7 @@ class MainScene {
   _renderVersion() {
     const ctx = this.ctx;
     ctx.fillStyle = '#8693A6';
-    ctx.font = '16px PingFang SC, sans-serif';
+    ctx.font = `${16 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('v1.0.0', this.W / 2, this.H - 40);

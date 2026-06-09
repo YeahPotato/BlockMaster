@@ -7,11 +7,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class SelectScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -109,19 +110,20 @@ class SelectScene {
 
   _renderHeader() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     // 返回按钮
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, 30, 40, 110, 70, 24);
     ctx.fill();
     ctx.fillStyle = '#2C3E50';
-    ctx.font = '24px sans-serif';
+    ctx.font = `${24 * fontScale}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('◀ 返回', 85, 75);
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 40px PingFang SC, sans-serif';
+    ctx.font = `bold ${40 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('选 择 关 卡', this.W / 2, 75);
@@ -143,6 +145,7 @@ class SelectScene {
 
   _renderLevelGrid() {
     const ctx = this.ctx;
+    const fontScale = this.scaleY;
     for (const item of this.levelButtons) {
       const { x, y, w, h, data } = item;
       const { chapter, level, stars, unlocked } = data;
@@ -154,7 +157,7 @@ class SelectScene {
 
       // 关卡序号
       ctx.fillStyle = unlocked ? '#2C3E50' : '#ADB5BD';
-      ctx.font = 'bold 48px PingFang SC, sans-serif';
+      ctx.font = `bold ${48 * fontScale}px PingFang SC, sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(`${level}`, x + w / 2, y + h / 2 - 20);
@@ -162,11 +165,11 @@ class SelectScene {
       // 星数
       if (stars > 0) {
         ctx.fillStyle = '#FFB400';
-        ctx.font = '28px sans-serif';
+        ctx.font = `${28 * fontScale}px sans-serif`;
         ctx.fillText('⭐'.repeat(stars), x + w / 2, y + h / 2 + 30);
       } else if (!unlocked) {
         ctx.fillStyle = '#8693A6';
-        ctx.font = '28px sans-serif';
+        ctx.font = `${28 * fontScale}px sans-serif`;
         ctx.fillText('🔒', x + w / 2, y + h / 2 + 30);
       }
     }
@@ -175,7 +178,7 @@ class SelectScene {
   _renderFooter() {
     const ctx = this.ctx;
     ctx.fillStyle = '#8693A6';
-    ctx.font = '18px PingFang SC, sans-serif';
+    ctx.font = `${18 * this.scaleY}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('点击关卡开始游戏', this.W / 2, this.H - 40);

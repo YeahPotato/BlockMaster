@@ -19,7 +19,8 @@ class SceneManager {
     this.databus = databus;
     this.currentScene = null;
     this.sceneStack = [];
-    this.scale = 1; // 由 main.js 设置
+    this.scaleX = 1;
+    this.scaleY = 1;
     this.scenes = {
       main: MainScene,
       select: SelectScene,
@@ -31,8 +32,9 @@ class SceneManager {
     };
   }
 
-  setScale(scale) {
-    this.scale = scale;
+  setScale(scaleX, scaleY) {
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
   }
 
   go(sceneName, params = {}) {
@@ -44,7 +46,7 @@ class SceneManager {
       this.currentScene.onExit();
     }
     const SceneClass = this.scenes[sceneName];
-    this.currentScene = new SceneClass(this.ctx, this.databus, params, this.scale);
+    this.currentScene = new SceneClass(this.ctx, this.databus, params, this.scaleX, this.scaleY);
     // 设置 sceneManager 引用到场景
     if (this.currentScene) {
       this.currentScene._sceneManager = this;
@@ -82,28 +84,12 @@ class SceneManager {
     if (!this.currentScene || !this.currentScene.render) return;
     
     const ctx = this.ctx;
-    const canvas = ctx.canvas;
-    
-    // 获取屏幕实际尺寸
-    const sysInfo = wx.getSystemInfoSync();
-    const screenWidth = sysInfo.screenWidth;
-    const screenHeight = sysInfo.screenHeight;
-    
-    // 计算居中偏移（以短边为基准时会出现黑边）
-    const scaleX = screenWidth / DESIGN_W;
-    const scaleY = screenHeight / DESIGN_H;
-    const scale = Math.min(scaleX, scaleY);
-    
-    // 计算黑边偏移量
-    const offsetX = (screenWidth - DESIGN_W * scale) / 2;
-    const offsetY = (screenHeight - DESIGN_H * scale) / 2;
     
     // 保存原始状态
     ctx.save();
     
-    // 平移到居中位置，然后缩放
-    ctx.translate(offsetX, offsetY);
-    ctx.scale(scale, scale);
+    // 应用缩放变换
+    ctx.scale(this.scaleX, this.scaleY);
     
     // 渲染当前场景（所有坐标都是设计稿坐标）
     this.currentScene.render();
@@ -114,19 +100,26 @@ class SceneManager {
 
   handleTouchStart(x, y) {
     if (this.currentScene && this.currentScene.onTouchStart) {
-      this.currentScene.onTouchStart(x, y);
+      // 将屏幕坐标转换为设计稿坐标
+      const designX = x / this.scaleX;
+      const designY = y / this.scaleY;
+      this.currentScene.onTouchStart(designX, designY);
     }
   }
 
   handleTouchMove(x, y) {
     if (this.currentScene && this.currentScene.onTouchMove) {
-      this.currentScene.onTouchMove(x, y);
+      const designX = x / this.scaleX;
+      const designY = y / this.scaleY;
+      this.currentScene.onTouchMove(designX, designY);
     }
   }
 
   handleTouchEnd(x, y) {
     if (this.currentScene && this.currentScene.onTouchEnd) {
-      this.currentScene.onTouchEnd(x, y);
+      const designX = x / this.scaleX;
+      const designY = y / this.scaleY;
+      this.currentScene.onTouchEnd(designX, designY);
     }
   }
 

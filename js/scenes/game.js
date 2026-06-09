@@ -7,11 +7,12 @@ const DESIGN_W = 750;
 const DESIGN_H = 1334;
 
 class GameScene {
-  constructor(ctx, databus, params = {}, scale = 1) {
+  constructor(ctx, databus, params = {}, scaleX = 1, scaleY = 1) {
     this.ctx = ctx;
     this.databus = databus;
     this.params = params;
-    this.scale = scale;
+    this.scaleX = scaleX;
+    this.scaleY = scaleY;
     this.W = DESIGN_W;
     this.H = DESIGN_H;
     this.init();
@@ -201,6 +202,7 @@ class GameScene {
   _renderTopBar() {
     const ctx = this.ctx;
     const W = this.W;
+    const fontScale = this.scaleY;
 
     // 返回按钮
     for (const btn of this.topButtons) {
@@ -209,20 +211,20 @@ class GameScene {
 
     // 关卡名
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 24px PingFang SC, sans-serif';
+    ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(`第 ${this.chapter}-${this.level} 关`, W / 2 - 60, 75);
 
     // 计时器
     ctx.fillStyle = '#8693A6';
-    ctx.font = '20px PingFang SC, sans-serif';
+    ctx.font = `${20 * fontScale}px PingFang SC, sans-serif`;
     const time = this._formatTime(this.elapsedTime);
     ctx.fillText(`⏱ ${time}`, W / 2 + 60, 75);
 
     // 星级
     ctx.fillStyle = '#FFB400';
-    ctx.font = '28px sans-serif';
+    ctx.font = `${28 * fontScale}px sans-serif`;
     ctx.fillText('⭐ ⭐ ⭐', W / 2, 110);
   }
 
@@ -354,6 +356,7 @@ class GameScene {
     const boxW = 500, boxH = 380;
     const boxX = (W - boxW) / 2;
     const boxY = (H - boxH) / 2;
+    const fontScale = this.scaleY;
     
     ctx.fillStyle = '#FFFFFF';
     this._roundRect(ctx, boxX, boxY, boxW, boxH, 24);
@@ -361,29 +364,29 @@ class GameScene {
 
     // 标题
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 48px PingFang SC, sans-serif';
+    ctx.font = `bold ${48 * fontScale}px PingFang SC, sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('🎉 通关！', W / 2, boxY + 60);
 
     // 星级
     ctx.fillStyle = '#FFB400';
-    ctx.font = '48px sans-serif';
+    ctx.font = `${48 * fontScale}px sans-serif`;
     ctx.fillText(this.winStars, W / 2, boxY + 120);
 
     // 时间
     ctx.fillStyle = '#8693A6';
-    ctx.font = '24px PingFang SC, sans-serif';
+    ctx.font = `${24 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText(`⏱ ${this._formatTime(this.elapsedTime)}`, W / 2, boxY + 170);
 
     // 提示使用情况
     ctx.fillStyle = '#8693A6';
-    ctx.font = '20px PingFang SC, sans-serif';
+    ctx.font = `${20 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText(`💡 使用提示: ${this.hintTicketsUsed} 次`, W / 2, boxY + 200);
 
     // 奖励
     ctx.fillStyle = '#2C3E50';
-    ctx.font = 'bold 28px PingFang SC, sans-serif';
+    ctx.font = `bold ${28 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText(`🪙 +${this.winReward.coins}  💎 +${this.winReward.diamonds}`, W / 2, boxY + 250);
 
     // 按钮区域
@@ -396,7 +399,7 @@ class GameScene {
     this._roundRect(ctx, btnX1, btnY, btnW1, btnH1, 16);
     ctx.fill();
     ctx.fillStyle = '#FFFFFF';
-    ctx.font = 'bold 24px PingFang SC, sans-serif';
+    ctx.font = `bold ${24 * fontScale}px PingFang SC, sans-serif`;
     ctx.fillText('下一关 →', btnX1 + btnW1 / 2, btnY + 30);
 
     // 返回选关按钮
